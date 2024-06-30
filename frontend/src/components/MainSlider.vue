@@ -1,76 +1,54 @@
 <template>
-    <div class="er">
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div>
-    </div>
-
-
-
+    <swiper
+    :modules="modules"
+    :slides-per-view="1"
+    :space-between="50"
+    :pagination="{ clickable: true }"
+    :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
+        <swiper-slide>Slide 1</swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+    </swiper>
 </template>
+<script>
+import { Pagination, A11y } from 'swiper/modules';
 
-<script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
 
-import { onMounted } from 'vue';
-import Swiper from 'swiper/bundle';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-onMounted(() => {
-    document.addEventListener('DOMContentLoaded', () => {
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-    });
-});
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+      modules: [Pagination, A11y],
+    };
+  },
+};
 </script>
 
 <style scoped>
-.er {
-    width: 700px;
-    margin: 0 auto;
-}
-
-.swiper {
-    width: 600px;
-    height: 300px;
-}
-
-.swiper-slide {
-    background-color: red;
-    width: 500px;
-    height: 250px;
+.swiper-slide{
+    height: 500px;
+    background: #fff;
 }
 </style>
