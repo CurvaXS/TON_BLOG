@@ -1,5 +1,5 @@
 {
-    "url": "",
+    "url": "http://localhost:5173/",
     "name": "tonconnect",
     "iconUrl": "https://ton-connect.github.io/demo-dapp/apple-touch-icon.png"
 }
