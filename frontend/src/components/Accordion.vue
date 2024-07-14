@@ -17,6 +17,27 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
                         </div>
                     </div>
+                    <div class="tab">
+                        <input type="checkbox" id="chck3">
+                        <label class="tab-label" for="chck3">Item 3</label>
+                        <div class="tab-content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="checkbox" id="chck4">
+                        <label class="tab-label" for="chck4">Item 4</label>
+                        <div class="tab-content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="checkbox" id="chck5">
+                        <label class="tab-label" for="chck5">Item 5</label>
+                        <div class="tab-content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -62,7 +83,7 @@ input {
     background: rgb(195, 174, 255);
     background: linear-gradient(90deg, rgba(195, 174, 255, 1) 0%, rgba(126, 81, 254, 1) 36%, rgba(109, 94, 234, 1) 100%);
     border-radius: 10px;
-    padding: 1px;
+    padding: 1.5px 2px;
     margin-bottom: 16px;
 
     &-label {

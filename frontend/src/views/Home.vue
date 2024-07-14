@@ -1,11 +1,21 @@
 <template>
       <div class="wrapper">
         <HeaderComponent></HeaderComponent>
-        <HeaderBanner></HeaderBanner>
-        <img class="header__background-line" src="../assets/img/header__background-line.png" alt="">
+        <HeaderPresale></HeaderPresale>
+        <!-- <HeaderBanner></HeaderBanner> -->
+        <!-- <img class="header__background-line" src="../assets/img/header__background-line.png" alt=""> -->
+        <!-- <img class="header__background-top" src="../assets/img/miami__background.png" alt=""> -->
+       
+        
+        <!-- <div class="block__partners"></div>
+        <MainSlider></MainSlider> -->
+
+        <MainBlock></MainBlock>
+        <BlockWithCar></BlockWithCar>
+
+        <div class="header__background-top"></div>
         <img class="header__background" src="../assets/img/header__background.png" alt="">
-        <div class="block__partners"></div>
-        <MainSlider></MainSlider>
+
         <div class="line"></div>
         <div class="block_faq">
           <div class="faq__wrapper">
@@ -29,8 +39,13 @@
 
 <script setup>
 import HeaderComponent from '../components/HeaderComponent.vue';
+import HeaderPresale from '../components/HeaderPresale.vue';
+
 import HeaderBanner from '../components/HeaderBanner.vue';
 import MainSlider from '../components/MainSlider.vue';
+
+import MainBlock from '../components/MainBlock.vue';
+import BlockWithCar from '../components/BlockWithCar.vue';
 import Accordion from '../components/Accordion.vue';
 </script>
 
