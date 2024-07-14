@@ -1,22 +1,6 @@
-<template>
-    <swiper
-    :modules="modules"
-    :slides-per-view="1"
-    :space-between="50"
-    :pagination="{ clickable: true }"
-    :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-    </swiper>
-</template>
 <script>
+import Page1 from '../components/SliderPages/Page1.vue';
+
 import { Pagination, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -29,6 +13,7 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+    Page1
   },
   setup() {
     const onSwiper = (swiper) => {
@@ -46,9 +31,31 @@ export default {
 };
 </script>
 
+<template>
+  <swiper :modules="modules" :slides-per-view="1" :space-between="50" :pagination="{ clickable: true }"
+    :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
+    <swiper-slide>
+
+      <Page1></Page1>
+
+    </swiper-slide>
+    <swiper-slide>
+
+      <Page1></Page1>
+
+    </swiper-slide>
+    <swiper-slide>
+
+      <Page1></Page1>
+
+    </swiper-slide>
+  </swiper>
+</template>
+
+
 <style scoped>
-.swiper-slide{
-    height: 500px;
-    background: #fff;
+.swiper-slide {
+  background: transparent;
 }
+
 </style>

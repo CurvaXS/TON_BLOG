@@ -7,6 +7,16 @@
         <div class="block__partners"></div>
         <MainSlider></MainSlider>
         <div class="line"></div>
+        <div class="block_faq">
+          <div class="faq__wrapper">
+            <h2 id="faq">FAQ</h2>
+            <h1 class="faq__title">Lorem ipsum dolor amet</h1>
+            <div class="accordion__wrapper">
+              <Accordion></Accordion>
+            </div>
+            
+          </div>
+        </div>
         <div class="line-footer"></div>
         <footer>
           <div class="footer__wrapper">
@@ -21,4 +31,26 @@
 import HeaderComponent from '../components/HeaderComponent.vue';
 import HeaderBanner from '../components/HeaderBanner.vue';
 import MainSlider from '../components/MainSlider.vue';
+import Accordion from '../components/Accordion.vue';
 </script>
+
+<style scoped>
+#faq{
+  text-align: center;
+  font-family: Inter;
+  color: rgb(110, 139, 253);
+  font-size: 30px;
+  font-weight: 700;
+}
+.faq__title{
+  text-align: center;
+  font-family: Inter;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-weight: 700;
+}
+.accordion__wrapper{
+  max-width: 732px;
+  margin: 39px auto 73px;
+}
+</style>
