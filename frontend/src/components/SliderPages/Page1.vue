@@ -358,7 +358,9 @@
 
 }
 
-.item .item__block .block__wrapper-other {}
+/*.
+item .item__block .block__wrapper-other {}
+*/
 
 .item .item__mini-border {
     position: absolute;

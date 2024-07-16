@@ -50,7 +50,7 @@
 
 <style lang="scss">
 $midnight: rgba(0, 0, 0, 0.45);
-$clouds: #ecf0f1;
+$clouds: rgb(236, 240, 241);
 
 input {
     position: absolute;
@@ -80,8 +80,8 @@ input {
     width: 100%;
     color: white;
     overflow: hidden;
-    background: rgb(195, 174, 255);
-    background: linear-gradient(90deg, rgba(195, 174, 255, 1) 0%, rgba(126, 81, 254, 1) 36%, rgba(109, 94, 234, 1) 100%);
+    background: rgb(188, 62, 108);
+    background: linear-gradient(90deg, rgb(188, 62, 108) 0%, rgb(120, 16, 54) 50%, rgb(188, 62, 108) 100%);
     border-radius: 10px;
     padding: 1.5px 2px;
     margin-bottom: 16px;

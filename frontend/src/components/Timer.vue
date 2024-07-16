@@ -94,7 +94,7 @@ export default {
         },
         mainColor: {
             type: String,
-            default: '#7F35FF '
+            default: '#7F35FF'
         },
         secondFlipColor: {
             type: String,
@@ -170,25 +170,25 @@ export default {
                 }
 
                 if (idx === 0) {
-                    const els = el.querySelectorAll('span b');
-                    if (els) {
-                        for (let e of els) {
-                            const cls = e.classList[0];
-                            if (newValue.value / 1000 >= 1) {
-                                if (!cls.includes('-4digits')) {
-                                    const newCls = cls + '-4digits';
-                                    e.classList.add(newCls);
-                                    e.classList.remove(cls);
-                                }
-                            } else {
-                                if (cls.includes('-4digits')) {
-                                    const newCls = cls.replace('-4digits', '');
-                                    e.classList.add(newCls);
-                                    e.classList.remove(cls);
-                                }
-                            }
-                        }
-                    }
+                    // const els = el.querySelectorAll('span');
+                    // if (els) {
+                    //     for (let e of els) {
+                    //         const cls = e.classList[0];
+                    //         if (newValue.value / 1000 >= 1) {
+                    //             if (!cls.includes('-4digits')) {
+                    //                 const newCls = cls + '-4digits';
+                    //                 e.classList.add(newCls);
+                    //                 e.classList.remove(cls);
+                    //             }
+                    //         } else {
+                    //             if (cls.includes('-4digits')) {
+                    //                 const newCls = cls.replace('-4digits', '');
+                    //                 e.classList.add(newCls);
+                    //                 e.classList.remove(cls);
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }

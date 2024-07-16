@@ -11,11 +11,31 @@
     src: url('../assets/fonts/SF-Pro-Display-Light.otf');
 }
 
+@font-face {
+    font-family: 'DrukWideCyr-Bold';
+    src: url('../assets/fonts/drukwidecyr-bold.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../assets/fonts/drukwidecyr-bold.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../assets/fonts/drukwidecyr-bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../assets/fonts/drukwidecyr-bold.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../assets/fonts/drukwidecyr-bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../assets/fonts/drukwidecyr-bold.svg#drukwidecyr-bold') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
 @mixin d-flex($justify-content: space-between) {
     display: flex;
     flex-wrap: wrap;
     justify-content: $justify-content;
     align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,9 +46,12 @@ body {
     transition: all 0.4s ease-in-out;
 }
 
-// .go823957079 {
-//     top: -550px !important;
-// }
+.btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .wrapper {
     width: 100%;
@@ -41,14 +64,15 @@ body {
     //     right: -17px;
     // }
 
-    .header__presale{
+    .header__presale {
         width: 100%;
         padding-top: 255px;
 
-        .particles__logo{
+        .particles__logo {
             left: -10px;
         }
-        .stripes{
+
+        .stripes {
             width: 100%;
         }
     }
@@ -73,6 +97,7 @@ body {
         background-position: center;
         background-repeat: no-repeat;
     }
+
     .header__background {
         position: absolute;
         z-index: -3;
@@ -94,10 +119,19 @@ body {
         font-family: Inter;
     }
 
-    @media (max-width: 1700px) {
-        .header__background-top {
-            height: 500px;
 
+    .body {
+        .table {
+            background: url('../assets/img/tablet-v-back.png') !important;
+        }
+    }
+
+
+    @media (max-width: 1700px) {
+
+        .header__background-top,
+        .header__background {
+            height: 500px;
             background-repeat: no-repeat;
         }
     }
@@ -302,5 +336,5 @@ footer {
     width: 100%;
     height: 4px;
     background: rgba(195, 174, 255, 0.2);
-    margin: 40px 0;
+    // margin: 40px 0;
 }

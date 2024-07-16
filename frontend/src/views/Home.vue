@@ -50,10 +50,17 @@ import Accordion from '../components/Accordion.vue';
 </script>
 
 <style scoped>
+
+.faq__wrapper{
+  padding: 100px 0;
+  background: url('../assets/img/faq__back.png') center;
+  background-size: cover;
+}
 #faq{
+  padding-top: 60px;
   text-align: center;
   font-family: Inter;
-  color: rgb(110, 139, 253);
+  color: rgb(188, 62, 108);
   font-size: 30px;
   font-weight: 700;
 }
@@ -66,6 +73,8 @@ import Accordion from '../components/Accordion.vue';
 }
 .accordion__wrapper{
   max-width: 732px;
-  margin: 39px auto 73px;
+  margin: 39px auto 0;
+  
+  padding-bottom: 73px;
 }
 </style>

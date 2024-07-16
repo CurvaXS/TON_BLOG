@@ -1,14 +1,40 @@
 <template>
     <div class="header__presale">
         <!-- <img class="particles__logo" src="../assets/img/particles__logo.png" alt=""> -->
+        
         <div class="particle__logo">
             <img src="../assets/img/particles__logo.png" alt="">
         </div>
+        <div class="lighting"></div>
         <img class="stripes" src="../assets/img/Stripe.png" alt="">
     </div>
 </template>
 
 <style scoped lang="scss">
+.header__presale {
+    position: relative;
+
+    .lighting {
+        position: absolute;
+        left: -28px;
+        top: 87.11px;
+
+        width: 262.25px;
+        height: 351.6px;
+
+        transform: rotate(60.00deg);
+
+        // border: 6px solid red;
+
+        filter: blur(189.97px);
+        background: linear-gradient(132.90deg,
+                rgba(195, 174, 255, 0.2) 26.834%,
+                rgba(92, 62, 188, 0.2) 26.842%,
+                rgba(62, 154, 222, 0.2) 26.85%,
+                rgba(51, 100, 229, 0.2) 108.423%);
+    }
+}
+
 .particle__logo {
     position: absolute;
     top: 138px;
@@ -22,7 +48,7 @@
     border-radius: 50%;
     border: 2.5px solid rgb(255, 255, 255);
     backdrop-filter: blur(33.6px);
-    background: rgba(217, 217, 217, 0.2);
+    background: transparent;
 
     display: flex;
     justify-content: center;
@@ -31,6 +57,4 @@
     transform: rotate(-26deg);
 
 }
-
-
 </style>
