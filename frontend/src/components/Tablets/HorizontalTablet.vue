@@ -34,7 +34,7 @@ const SwingHor = (event) => {
 .midstream {
   width: 464px;
   height: 11px;
-  background: rgb(27, 20, 31);
+  background: rgb(30, 33, 38);
 }
 
 .loops {
@@ -63,7 +63,7 @@ const SwingHor = (event) => {
 
   border-radius: 6px;
   background: rgb(13, 17, 20);
-  border: 3px solid rgb(27, 20, 31);
+  border: 3px solid rgb(30, 33, 38);
 
   display: flex;
   align-items: center;

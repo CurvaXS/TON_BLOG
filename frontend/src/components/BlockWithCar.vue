@@ -11,19 +11,19 @@
         </div>
 
         <div class="car">
-
-            <div class="lights-wrapper">
-                <div class="lights">
+            <div class="smoke"></div>
+            <img src="../assets/img/car.png" alt="">
+        </div>
+        <div class="lights-wrapper">
+            <div class="lights">
+                <!-- <div class="light"></div>
                     <div class="light"></div>
-                    <div class="light"></div>
-                </div>
+                -->
+                <img src="../assets/img/car__blur.png" alt="">
             </div>
 
-            <div class="smoke"></div>
-
-            <img src="../assets/img/car.png" alt="">
-
         </div>
+
     </div>
 </template>
 
@@ -40,16 +40,20 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
     margin-top: 117px;
 
     width: 100%;
-    min-height: 1566px;
+    min-height: 1595px;
 
-    background: url("../assets/img/miami__background-3.png") no-repeat center;
+    background: url(/src/assets/img/miami__background-3.png) no-repeat center;
     background-size: cover;
+    background-position: bottom;
 
     .tablets {
         position: relative;
 
         .first-h {
-            padding-top: 30px;
+            position: absolute;
+            // padding-top: 30px;
+            top: 30px;
+            z-index: 10;
 
             .midstream {
                 width: 581px;
@@ -68,21 +72,23 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
         }
 
         .second-h {
-            margin-top: 95px;
+            padding-top: 300px;
 
             .midstream {
-                width: 220px;
+                width: 238px;
+                margin-bottom: -63px;
             }
 
             .loops {
-                width: 170px;
-                margin-left: 30px;
+                display: none;
             }
 
             .table-hor {
                 margin-left: 5px;
-                width: 231px;
+                width: 220px;
                 height: 114px;
+
+                transform-origin: center;
             }
         }
 
@@ -142,46 +148,97 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
         .second-v {
             position: absolute;
-            top: 430px;
-            left: 0;
+            top: 1030px;
+            left: 100px;
 
-            flex-direction: row !important;
+            flex-direction: column-reverse !important;
+            .midstream{
+                display: block;
+
+                width: 257px;
+                height: 11px;
+
+                margin-left: -109px;
+
+                background-color: rgb(30, 33, 38);
+            }
+
+            .loops-right {
+                margin-top: 0;
+                width: 100px;
+                height: 23px;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .loop {
+                    width: 10px;
+                    height: 23px;
+                    background: rgb(30, 33, 38);
+                }
+
+                .loop:nth-child(1) {
+                    background: transparent;
+                }
+            }
+
+            .table {
+                height: 255px;
+                width: 123px;
+
+                p {
+                    font-size: 27px;
+                    padding: 10px;
+                }
+            }
         }
     }
 
     .car {
         position: absolute;
-        bottom: 113px;
-        left: -9px;
 
-        .lights-wrapper {
-            position: relative;
+        bottom: 0px;
+        left: calc((100% - 71%) / 2);
 
-            .lights {
-                position: absolute;
-                top: 315px;
-                left: 237px;
-                width: 569px;
-                transform: rotate(-2.5deg);
+        width: 80%;
 
-                animation: flicker 1.5s infinite;
-
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                .light {
-                    width: 110px;
-                    height: 120px;
-                    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 85, 0, 0.838), rgba(0, 0, 0, 0) 100%);
-                    border-radius: 5px;
-                }
-            }
-        }
-
+        z-index: -1;
 
         img {
-            width: 1000px;
+            width: 100%;
+        }
+    }
+
+    .lights-wrapper {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+
+        .lights {
+            position: absolute;
+            top: -428px;
+            width: 80%;
+            /* left: 14.5%; */
+            left: 10%;
+            z-index: -2;
+            transform: rotate(-2.5deg);
+            animation: flicker 1.5s infinite;
+
+            img {
+                width: 100%;
+            }
+
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+
+            // .light {
+            //     width: 110px;
+            //     height: 120px;
+            //     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 85, 0, 0.838), rgba(0, 0, 0, 0) 100%);
+            //     border-radius: 5px;
+            // }
         }
     }
 }

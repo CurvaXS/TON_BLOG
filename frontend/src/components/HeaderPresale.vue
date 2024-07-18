@@ -1,12 +1,12 @@
 <template>
     <div class="header__presale">
-        <!-- <img class="particles__logo" src="../assets/img/particles__logo.png" alt=""> -->
-        
+        <!--<img class="particles__logo" src="../assets/img/particles__logo.png" alt=""> -->
         <div class="particle__logo">
             <img src="../assets/img/particles__logo.png" alt="">
         </div>
         <div class="lighting"></div>
-        <img class="stripes" src="../assets/img/Stripe.png" alt="">
+        <!-- <img class="stripes" src="../assets/img/Stripe.png" alt=""> -->
+        <img class="darken" src="../assets/img/darken-top.png" alt="">
     </div>
 </template>
 
@@ -33,6 +33,16 @@
                 rgba(62, 154, 222, 0.2) 26.85%,
                 rgba(51, 100, 229, 0.2) 108.423%);
     }
+
+    .darken {
+        position: absolute;
+        top: 200px;
+        /* left: calc((100% - 2780px) / 2); */
+        z-index: 1;
+        /* min-width: 2780px; */
+        width: 190%;
+        
+    }
 }
 
 .particle__logo {
@@ -56,5 +66,4 @@
 
     transform: rotate(-26deg);
 
-}
-</style>
+}</style>

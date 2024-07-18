@@ -1,6 +1,8 @@
 <template>
     <div class="main__block">
-        <div class="darken"></div>
+        <div class="darken">
+            <img src="../assets/img/darken.png" alt="">
+        </div>
         <div class="main__block-wrapper">
             <div class="block__info">
                 <h1 class="name">LAUNCH ON</h1>
@@ -68,6 +70,7 @@
                             stroke="#EED1FF" stroke-width="4" />
                     </svg>
                 </div>
+                <div class="item-logo-back"></div>
             </div>
         </div>
 
@@ -94,14 +97,15 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
     .darken {
         position: absolute;
         width: 100%;
-        height: 282px;
-        background: url(../assets/img/darken.png) no-repeat center;
-        background-size: cover;
+        // height: 282px;
+        // background: url(../assets/img/darken.png) no-repeat center;
+        // background-size: cover;
         top: 2250px;
+        z-index: 1;
     }
 
     .main__block-wrapper {
-        padding: 170px 0;
+        padding: 500px 0 170px;
 
         .block__info {
             width: 1045px;
@@ -235,7 +239,8 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                 left: calc((100% - 40%) / 2);
                 width: 40%;
                 padding-top: 40%;
-                /* Это создаст круг */
+                
+                z-index: 3;
 
                 display: flex;
                 align-items: center;
@@ -253,6 +258,22 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
                     top: 0;
                 }
+            }
+
+            .item-logo-back {
+                position: absolute;
+                top: -20%;
+
+                left: calc((100% - 45%) / 2);
+                width: 45%;
+                padding-top: 45%;
+
+                border-radius: 50%;
+
+                z-index: 2;
+
+                filter: blur(351.8px);
+                background: rgba(73, 80, 207, 0.4);
             }
 
             @media (max-width: 1575px) {

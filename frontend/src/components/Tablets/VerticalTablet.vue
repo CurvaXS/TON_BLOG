@@ -1,11 +1,12 @@
 <template>
   <div class="body">
+    <div class="midstream"></div>
     <div class="loops-right">
       <div class="loop"></div>
       <div class="loop"></div>
     </div>
     <div class="table" @click="Swing">
-      <p>waynomics</p>
+      <p>lorem ipsum</p>
     </div>
   </div>
 </template>
@@ -27,7 +28,9 @@ const Swing = (event) => {
 * {
   cursor: pointer;
 }
-
+.midstream{
+  display: none;
+}
 .body {
   perspective: 800px;
 
@@ -49,7 +52,7 @@ const Swing = (event) => {
 .loops-right .loop {
   width: 59px;
   height: 17px;
-  background: rgb(28, 34, 40);
+  background: rgb(30, 33, 38);
 }
 
 .table {
