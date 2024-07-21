@@ -106,4 +106,47 @@ const SwingHor = (event) => {
     transform: rotate3d(-1, 0, 0, 0deg);
   }
 }
+
+@media (max-width: 770px) {
+  .midstream {
+    width: 300px;
+    height: 9px;
+  }
+
+  .loops {
+    width: 250px;
+    margin-left: 40px;
+  }
+
+  .table-hor {
+    margin-left: 38px;
+    width: 270px;
+    height: 85px;
+  }
+
+  .table-hor p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 500px) {
+  .midstream {
+    width: 150px;
+    height: 9px;
+  }
+
+  .loops {
+    width: 100px;
+    margin-left: 20px;
+  }
+
+  .table-hor {
+    margin-left: 10px;
+    width: 120px;
+    height: 50px;
+  }
+
+  .table-hor p {
+    font-size: 16px;
+  }
+}
 </style>

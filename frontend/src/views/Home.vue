@@ -9,13 +9,13 @@
         
         <!-- <div class="block__partners"></div>
         <MainSlider></MainSlider> -->
+        <HeaderBackgroundTop class="header__background-top"></HeaderBackgroundTop>
+        <img class="header__background" src="../assets/img/header__background.png" alt="">
 
         <MainBlock></MainBlock>
         <BlockWithCar></BlockWithCar>
 
-        <div class="header__background-top"></div>
-        <img class="header__background" src="../assets/img/header__background.png" alt="">
-
+        
         <div class="line"></div>
         <div class="block_faq">
           <div class="faq__wrapper">
@@ -43,6 +43,7 @@ import HeaderPresale from '../components/HeaderPresale.vue';
 
 import HeaderBanner from '../components/HeaderBanner.vue';
 import MainSlider from '../components/MainSlider.vue';
+import HeaderBackgroundTop from '../components/HeaderBackgroundTop.vue';
 
 import MainBlock from '../components/MainBlock.vue';
 import BlockWithCar from '../components/BlockWithCar.vue';

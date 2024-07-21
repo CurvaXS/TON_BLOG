@@ -1,8 +1,6 @@
 <template>
     <div class="main__block">
-        <div class="darken">
-            <img src="../assets/img/darken.png" alt="">
-        </div>
+
         <div class="main__block-wrapper">
             <div class="block__info">
                 <h1 class="name">LAUNCH ON</h1>
@@ -94,15 +92,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
     background: url("../assets/img/miami__background-2.png") no-repeat center;
     background-size: cover;
 
-    .darken {
-        position: absolute;
-        width: 100%;
-        // height: 282px;
-        // background: url(../assets/img/darken.png) no-repeat center;
-        // background-size: cover;
-        top: 2250px;
-        z-index: 1;
-    }
+
 
     .main__block-wrapper {
         padding: 500px 0 170px;
@@ -239,7 +229,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                 left: calc((100% - 40%) / 2);
                 width: 40%;
                 padding-top: 40%;
-                
+
                 z-index: 3;
 
                 display: flex;
@@ -304,6 +294,213 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                             font-size: 30px;
                             padding-bottom: 20px;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 1100px) {
+    .main__block {
+        margin-top: 0px;
+    }
+
+    .main__block-wrapper {
+        padding: 350px 0 0 !important;
+
+        .block__info {
+            width: 750px !important;
+
+            h1.name {
+                font-size: 45px !important;
+            }
+
+            .steps {
+                margin-top: 44px;
+
+                .step__line {
+                    margin-bottom: 25px;
+
+                    width: 90px !important;
+                }
+
+                .item {
+                    width: 200px !important;
+                    height: 200px !important;
+
+                    background-size: cover !important;
+                }
+
+                p {
+                    margin-top: 25px;
+                    font-size: 23px !important;
+                }
+            }
+        }
+
+        .block__components {
+            .item {
+                margin-top: 90px !important;
+
+                .component {
+                    p.percents {
+                        font-size: 40px !important;
+                        line-height: 61px;
+                    }
+
+                    p.naming {
+                        margin-top: 7px;
+                        font-size: 25px !important;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+
+
+    .main__block-wrapper {
+        padding: 275px 0 200px !important;
+
+        .block__info {
+            width: 750px !important;
+
+            .steps {
+                margin-top: 0px !important;
+                flex-direction: column;
+
+                .step__item {
+                    width: 100%;
+                    flex-direction: row !important;
+                    justify-content: flex-start !important;
+                }
+
+                .step__item:nth-child(3) {
+                    flex-direction: row-reverse !important;
+                }
+
+                .step__line {
+                    transform: rotate(45deg);
+                }
+
+                .step__line:nth-child(4) {
+                    transform: rotate(-45deg);
+                }
+
+                .item {
+                    width: 220px !important;
+                    height: 220px !important;
+                }
+            }
+        }
+
+        .block__components {
+            .item {
+                margin-top: 40px !important;
+
+                .component {
+                    p.percents {
+                        font-size: 25px !important;
+                        line-height: 50px;
+                    }
+
+                    p.naming {
+                        margin-top: 4px;
+                        font-size: 20px !important;
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+
+
+    .main__block-wrapper {
+        padding: 275px 0 200px !important;
+
+        .block__info {
+            width: 500px !important;
+        }
+
+        .block__components {
+            .item {
+                margin-top: 40px !important;
+
+                .component {
+                    p.percents {
+                        font-size: 25px !important;
+                        line-height: 50px;
+                    }
+
+                    p.naming {
+                        margin-top: 4px;
+                        font-size: 20px !important;
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .main__block-wrapper {
+        padding: 200px 0 200px !important;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .main__block-wrapper {
+        padding: 150px 0 200px !important;
+
+        .block__info {
+            width: 290px !important;
+
+            .steps {
+                margin-top: 44px;
+
+                .step__line {
+                    margin-bottom: 18px !important;
+                    width: 70px !important;
+                }
+
+                .item {
+
+                    width: 180px !important;
+                    height: 180px !important;
+
+                }
+
+                p {
+                    font-size: 18px !important;
+                }
+            }
+        }
+
+        .block__components {
+            .item {
+                margin-top: 10px !important;
+
+                .component {
+                    p.percents {
+                        font-size: 10px !important;
+                        line-height: 25px !important;
+                    }
+
+                    p.naming {
+                        margin-top: 1px !important;
+                        font-size: 8px !important;
+                        padding-bottom: 0px !important;
                     }
                 }
             }

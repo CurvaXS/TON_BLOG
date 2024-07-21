@@ -6,7 +6,7 @@
         </div>
         <div class="lighting"></div>
         <!-- <img class="stripes" src="../assets/img/Stripe.png" alt=""> -->
-        <img class="darken" src="../assets/img/darken-top.png" alt="">
+        <!-- <img class="darken" src="../assets/img/darken-top.png" alt=""> -->
     </div>
 </template>
 
@@ -22,6 +22,8 @@
         width: 262.25px;
         height: 351.6px;
 
+        z-index: 9;
+
         transform: rotate(60.00deg);
 
         // border: 6px solid red;
@@ -33,16 +35,6 @@
                 rgba(62, 154, 222, 0.2) 26.85%,
                 rgba(51, 100, 229, 0.2) 108.423%);
     }
-
-    .darken {
-        position: absolute;
-        top: 200px;
-        /* left: calc((100% - 2780px) / 2); */
-        z-index: 1;
-        /* min-width: 2780px; */
-        width: 190%;
-        
-    }
 }
 
 .particle__logo {
@@ -50,7 +42,7 @@
     top: 138px;
     left: -58px;
 
-    z-index: -1;
+    z-index: 10;
 
     width: 150px;
     height: 150px;
@@ -66,4 +58,11 @@
 
     transform: rotate(-26deg);
 
-}</style>
+}
+
+@media (max-width:770px) {
+    .darken {
+        top: 265px !important;
+    }
+}
+</style>

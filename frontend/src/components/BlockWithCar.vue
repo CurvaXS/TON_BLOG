@@ -10,19 +10,15 @@
             <VerticalTablet class="second-v"></VerticalTablet>
         </div>
 
-        <div class="car">
+        <div class="car car-st">
             <div class="smoke"></div>
             <img src="../assets/img/car.png" alt="">
         </div>
-        <div class="lights-wrapper">
-            <div class="lights">
-                <!-- <div class="light"></div>
-                    <div class="light"></div>
-                -->
-                <img src="../assets/img/car__blur.png" alt="">
-            </div>
 
+        <div class="lights car-st">
+            <img src="../assets/img/car__blur.png" alt="">
         </div>
+
 
     </div>
 </template>
@@ -152,7 +148,8 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
             left: 100px;
 
             flex-direction: column-reverse !important;
-            .midstream{
+
+            .midstream {
                 display: block;
 
                 width: 257px;
@@ -196,49 +193,27 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
     }
 
     .car {
+        z-index: -1;
+    }
+
+    .lights {
+        z-index: -2;
+    }
+
+    .car-st {
         position: absolute;
 
         bottom: 0px;
-        left: calc((100% - 71%) / 2);
+        left: 50%;
+        transform: translateX(-44%);
 
-        width: 80%;
+        animation: flicker 1.5s infinite;
+        
 
-        z-index: -1;
+        width: 33%;
 
         img {
             width: 100%;
-        }
-    }
-
-    .lights-wrapper {
-        position: relative;
-        bottom: 0;
-        width: 100%;
-
-        .lights {
-            position: absolute;
-            top: -428px;
-            width: 80%;
-            /* left: 14.5%; */
-            left: 10%;
-            z-index: -2;
-            transform: rotate(-2.5deg);
-            animation: flicker 1.5s infinite;
-
-            img {
-                width: 100%;
-            }
-
-            // display: flex;
-            // align-items: center;
-            // justify-content: space-between;
-
-            // .light {
-            //     width: 110px;
-            //     height: 120px;
-            //     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 85, 0, 0.838), rgba(0, 0, 0, 0) 100%);
-            //     border-radius: 5px;
-            // }
         }
     }
 }
@@ -254,6 +229,209 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1440px) {
+    .main__block-car {
+        .car-st {
+            overflow: hidden;
+            left: 50%;
+            width: 478px;
+
+            transform: translateX(-44%);
+
+            img {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .main__block-car {}
+}
+
+@media (max-width: 770px) {
+    .main__block-car {
+        // background-size: 200%;
+        min-height: 1000px;
+        margin-top: -75px;
+
+        .tablets {
+            .first-h {
+                top: 20px !important;
+                z-index: 5 !important;
+
+                .midstream {
+                    width: 300px;
+                    height: 9px;
+                }
+
+                .loops {
+                    width: 250px;
+                    margin-left: 40px;
+                }
+
+                .table-hor {
+                    margin-left: 38px;
+                    width: 270px;
+                    height: 85px;
+                }
+
+                .table-hor p {
+                    font-size: 22px;
+                }
+            }
+
+            .second-h {
+                padding-top: 300px;
+
+                .midstream {
+                    width: 238px;
+                    margin-bottom: -63px;
+                }
+
+                .loops {
+                    display: none;
+                }
+
+                .table-hor {
+                    margin-left: 5px;
+                    width: 220px;
+                    height: 114px;
+
+                    transform-origin: center;
+                }
+            }
+
+            .third-h {
+                // position: absolute;
+                margin-top: 130px;
+
+
+                .midstream {
+                    width: 300px !important;
+                }
+
+                .loops {
+                    width: 210px;
+                    margin-right: 40px;
+                }
+
+                .table-hor {
+                    margin-right: 5px;
+                    height: 430px;
+                    height: 114px;
+                }
+            }
+
+            .fourth-h {
+                display: none;
+            }
+
+            .first-v {
+                position: absolute;
+                top: 30px;
+                right: 0;
+            }
+
+            .second-v {
+                position: absolute;
+                top: 400px;
+                left: 100px;
+
+                .midstream {
+                    width: 200px;
+                    height: 11px;
+
+                    margin-left: -109px;
+                }
+
+                .loops-right {
+                    width: 80px;
+                }
+
+                .table {
+                    height: 200px;
+                    width: 100px;
+
+                    p {
+                        font-size: 22px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+
+        .car-st {
+            width: 295px;
+            transform: translateX(-45.5%);
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .main__block-car {
+        // background-size: 200%;
+        min-height: 1000px;
+        margin-top: -75px;
+
+        .tablets {
+            .first-h {
+                top: 20px !important;
+                z-index: 5 !important;
+
+                .midstream {
+                    width: 200px;
+                    height: 9px;
+                }
+
+                .loops {
+                    width: 140px;
+                }
+
+                .table-hor {
+                    margin-left: 18px;
+                    width: 220px;
+                    height: 85px;
+                }
+
+                .table-hor p {
+                    font-size: 16px;
+                }
+            }
+
+            .third-h {
+                .midstream {
+                    width: 150px !important;
+                }
+            }
+
+            .first-v {
+                position: absolute;
+                top: 30px;
+                right: 0;
+
+                .loops-right {
+                    height: 150px !important;
+                }
+
+                .table {
+                    width: 50px;
+                    height: 250px;
+
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .second-v {
+                left: 50px;
+            }
+        }
+
     }
 }
 </style>

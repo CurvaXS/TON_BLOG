@@ -28,9 +28,11 @@ const Swing = (event) => {
 * {
   cursor: pointer;
 }
-.midstream{
+
+.midstream {
   display: none;
 }
+
 .body {
   perspective: 800px;
 
@@ -58,7 +60,6 @@ const Swing = (event) => {
 .table {
   width: 70.36px;
   height: 533.86px;
-
 
 
   display: flex;
@@ -104,6 +105,61 @@ const Swing = (event) => {
 
   100% {
     transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+@media (max-width: 1045px) {
+
+  .loops-right {
+    height: 155px;
+  }
+
+  .loops-right .loop {
+    width: 59px;
+    height: 17px;
+    background: rgb(30, 33, 38);
+  }
+
+  .table {
+    width: 95px;
+    height: 450px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease-in-out;
+    transform-origin: right;
+  }
+
+  .table p {
+    font-size: 32px;
+
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+  }
+}
+
+@media (max-width: 770px) {
+
+  .loops-right {
+    height: 100px;
+  }
+
+  .loops-right .loop {
+    width: 40px;
+    height: 14px;
+  }
+
+  .table {
+    width: 70px;
+    height: 400px;
+  }
+
+  .table p {
+    font-size: 27px;
   }
 }
 </style>

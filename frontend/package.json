@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tonconnect/ui": "^2.0.5",
+    "mdb-vue-ui-kit": "^5.0.0",
     "moment": "^2.30.1",
     "swiper": "^11.1.4",
     "uuid": "^10.0.0",

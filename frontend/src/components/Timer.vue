@@ -168,28 +168,6 @@ export default {
                     void el.offsetWidth;
                     el.classList.add('flip');
                 }
-
-                if (idx === 0) {
-                    // const els = el.querySelectorAll('span');
-                    // if (els) {
-                    //     for (let e of els) {
-                    //         const cls = e.classList[0];
-                    //         if (newValue.value / 1000 >= 1) {
-                    //             if (!cls.includes('-4digits')) {
-                    //                 const newCls = cls + '-4digits';
-                    //                 e.classList.add(newCls);
-                    //                 e.classList.remove(cls);
-                    //             }
-                    //         } else {
-                    //             if (cls.includes('-4digits')) {
-                    //                 const newCls = cls.replace('-4digits', '');
-                    //                 e.classList.add(newCls);
-                    //                 e.classList.remove(cls);
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                }
             }
         }
 
@@ -316,10 +294,41 @@ export default {
 
 .flip-clock__slot {
     color: rgb(127, 53, 255);
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 700;
     line-height: 96px;
     display: block;
     color: v-bind(labelColor);
+}
+
+@media (max-width: 950px) {
+    .no-animation__card {
+        font-size: 65px;
+    }
+
+    .flip-clock__slot {
+        font-size: 80px;
+    }
+}
+@media (max-width: 770px) {
+    .no-animation__card {
+        font-size: 50px;
+    }
+
+    .flip-clock__slot {
+        font-size: 50px;
+    }
+}
+@media (max-width: 500px) {
+    .no-animation__card {
+        font-size: 35px;
+    }
+
+    .flip-clock__slot {
+        font-size: 30px;
+    }
+    .flip-clock__piece{
+        margin: 0;
+    }
 }
 </style>
