@@ -1,7 +1,7 @@
 <template>
     <div class="u">
         <img src="../assets/img/miami__background.png" alt="">
-        <div class="dark"></div>
+        <!-- <div class="dark"></div> -->
     </div>
 </template>
 

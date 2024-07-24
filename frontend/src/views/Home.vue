@@ -10,6 +10,7 @@
         <!-- <div class="block__partners"></div>
         <MainSlider></MainSlider> -->
         <HeaderBackgroundTop class="header__background-top"></HeaderBackgroundTop>
+        <!-- <img class="header__background-top" src="../assets/img/miami__background.png" alt=""> -->
         <img class="header__background" src="../assets/img/header__background.png" alt="">
 
         <MainBlock></MainBlock>

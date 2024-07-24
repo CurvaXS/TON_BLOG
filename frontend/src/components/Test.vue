@@ -1,34 +1,55 @@
 <template>
-  <div class="u">
-    <img src="../assets/img/miami__background.png" alt="">
-    <div class="dark"></div>
+  <div class="strp">
+    <div class="strp__item purple">
+      <p>
+        ONLY $WAY
+        <span class="border-word">PRESALE</span>
+        ONLY $WAY
+        <span class="border-word">PRESALE</span>
+        ONLY $WAY
+        <span class="border-word">PRESALE</span>
+        ONLY $WAY
+        <span class="border-word">PRESALE</span>
+        ONLY $WAY
+      </p>
+    </div>
+    <div class="strp__item blue c-white">
+      <p>
+        ONLY $WAY
+        <span class="border-word">PRESALE</span>
+        ONLY $WAY
+        <span class="border-word">PRESALE</span>
+        ONLY $WAY
+        <span class="border-word">PRESALE</span>
+        ONLY $WAY
+        <span class="border-word">PRESALE</span>
+        ONLY $WAY
+      </p>
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-
-
-.u {
-  position: relative;
+<style lang="scss" scoped>
+.strp {
   width: 100%;
-  overflow-x: hidden;
 
-  img {
-    width: 100%;
-    display: block; /* Убедитесь, что изображение блочный элемент */
+  .strp__item {
+    color: #000;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 32px;
   }
 
-  .dark {
-    width: 150%;
-    height: 63%;
+  .purple {
+    background-color: #7F35FF;
+  }
 
-    position: absolute;
-    bottom: -33%;
-    left: 50%; /* Центрируем элемент по горизонтали */
-    transform: translateX(-50%); /* Смещаем элемент на половину его ширины влево */
+  .blue {
+    background-color: #388BFF;
+  }
 
-    background: #000;
-    filter: blur(70px);
+  .c-white {
+    color: #FFF !important;
   }
 }
 </style>

@@ -5,7 +5,7 @@
             <img src="../assets/img/particles__logo.png" alt="">
         </div>
         <div class="lighting"></div>
-        <!-- <img class="stripes" src="../assets/img/Stripe.png" alt=""> -->
+        <img class="stripes" src="../assets/img/Stripe.png" alt="">
         <!-- <img class="darken" src="../assets/img/darken-top.png" alt=""> -->
     </div>
 </template>

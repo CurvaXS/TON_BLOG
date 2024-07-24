@@ -73,7 +73,15 @@ input {
 /* Accordion styles */
 .tabs {
     overflow: hidden;
-    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    // box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 77vh;
+    padding-bottom: 60px;
 }
 
 .tab {
