@@ -38,7 +38,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
     width: 100%;
     min-height: 1595px;
 
-    background: url(/src/assets/img/miami__background-3.png) no-repeat center;
+    background: url('../assets/img/miami__background-4.gif') no-repeat center;
     background-size: cover;
     background-position: bottom;
 
@@ -193,11 +193,11 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
     }
 
     .car {
-        z-index: -1;
+        z-index: 1;
     }
 
     .lights {
-        z-index: -2;
+        z-index: 0;
     }
 
     .car-st {
