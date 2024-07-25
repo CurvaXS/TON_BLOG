@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прозрачный текст с контуром</title>
+    <style>
+        .transparent-text {
+            font-size: 60px;
+            font-weight: bold;
+            color: white; /* Цвет текста */
+            position: relative;
+            display: inline-block;
+        }
+
+        .transparent-text::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: black; /* Цвет контура */
+            z-index: -1;
+            filter: blur(2px); /* Размытие для создания эффекта контура */
+            opacity: 1; /* Прозрачность фона */
+        }
+    </style>
+</head>
+<body>
+    <div class="transparent-text" data-text="Привет, мир!">Привет, мир!</div>
+</body>
+</html>
