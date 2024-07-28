@@ -5,10 +5,15 @@
             <img src="../assets/img/particles__logo.png" alt="">
         </div>
         <div class="lighting"></div>
-        <img class="stripes" src="../assets/img/Stripe.png" alt="">
+        <Stripes></Stripes>
+        <!-- <img class="stripes" src="../assets/img/Stripe.png" alt=""> -->
         <!-- <img class="darken" src="../assets/img/darken-top.png" alt=""> -->
     </div>
 </template>
+
+<script setup>
+import Stripes from './Stripes.vue'
+</script>
 
 <style scoped lang="scss">
 .header__presale {
@@ -60,9 +65,25 @@
 
 }
 
+@media (max-width:1100px) {
+    .header__presale{
+       padding-top: 180px
+    }
+}
+
 @media (max-width:770px) {
-    .darken {
-        top: 265px !important;
+    .header__presale{
+        padding-top: 130px
+    }
+}
+@media (max-width:450px) {
+    .header__presale{
+        padding-top: 100px
+    }
+}
+@media (max-width:400px) {
+    .header__presale{
+        padding-top: 70px
     }
 }
 </style>

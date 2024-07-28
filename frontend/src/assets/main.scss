@@ -90,7 +90,7 @@ body {
     }
 
 
-    .body {
+    .body-tablet {
         .table {
             background: url('../assets/img/tablet-v-back.png') no-repeat !important;
             background-size: cover !important;
@@ -118,31 +118,31 @@ header {
         width: 994px;
         @include d-flex(center);
         // margin: 0 auto;
-        z-index: 10;
+        z-index: 3010;
         top: 32px;
         left: calc((100% - 994px) / 2);
 
-        .header__logo {
-            @include d-flex;
+        // .header__logo {
+        //     @include d-flex;
 
-            .logo {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                background-color: antiquewhite;
-            }
+        //     .logo {
+        //         width: 64px;
+        //         height: 64px;
+        //         border-radius: 50%;
+        //         background-color: antiquewhite;
+        //     }
 
-            .logo__text {
-                margin-left: 10px;
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 29px;
+        //     .logo__text {
+        //         margin-left: 10px;
+        //         font-size: 24px;
+        //         font-weight: 400;
+        //         line-height: 29px;
 
-                span {
-                    color: rgb(195, 174, 255);
-                }
-            }
-        }
+        //         span {
+        //             color: rgb(195, 174, 255);
+        //         }
+        //     }
+        // }
 
         .header__nav {
             @include d-flex;
@@ -152,7 +152,7 @@ header {
             background: rgba(255, 255, 255, 0.06);
             transition: all 0.4s ease-in-out;
 
-            img {
+            .logo {
                 margin-left: 27px;
             }
 

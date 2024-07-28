@@ -7,25 +7,17 @@
                 <Timer></Timer>
                 <div class="steps">
                     <div class="step__item">
-                        <div class="item">
-                            <img src="../assets/img/wallet.png" alt="">
-                        </div>
+                        <RippleWallet></RippleWallet>
                         <p>Set up wallet</p>
                     </div>
                     <img src="../assets/img/step_line.png" alt="" class="step__line">
                     <div class="step__item">
-                        <div class="item">
-                            <img src="../assets/img/line_top.png" alt="">
-
-                        </div>
+                        <RippleLineTop></RippleLineTop>
                         <p>x100</p>
                     </div>
                     <img src="../assets/img/step_line.png" alt="" class="step__line">
                     <div class="step__item">
-                        <div class="item">
-                            <img src="../assets/img/data_base.png" alt="">
-
-                        </div>
+                        <RippleDataBase></RippleDataBase>
                         <p>Rich guy</p>
                     </div>
                 </div>
@@ -62,9 +54,9 @@
                 </div>
                 <div class="item-logo">
                     <svg width="315" height="207" viewBox="0 0 315 207" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M310.035 3.00003L254.386 117.714L66.9308 117.714L5.02781 3L310.035 3.00003Z"
+                        <path d="M310.035 3.00003L254.386 117.714L66.9306 117.714L5.02763 3L310.035 3.00003Z"
                             fill="#EED1FF" stroke="#EED1FF" stroke-width="6" />
-                        <path d="M258.559 144L223.822 205L105.276 205L66.6344 144L258.559 144Z" fill="#EED1FF"
+                        <path d="M243.83 144L214.738 205L111.695 205L78.8484 144L243.83 144Z" fill="#EED1FF"
                             stroke="#EED1FF" stroke-width="4" />
                     </svg>
                 </div>
@@ -80,11 +72,14 @@ import Timer from './Timer.vue'
 import HorizontalTablet from './Tablets/HorizontalTablet.vue'
 import VerticalTablet from './Tablets/VerticalTablet.vue'
 
+import RippleWallet from './Ripple/RippleWallet.vue'
+import RippleDataBase from './Ripple/RippleDataBase.vue'
+import RippleLineTop from './Ripple/RippleLineTop.vue'
 </script>
 
 <style scoped lang="scss">
 .main__block {
-    margin-top: -100px;
+    margin-top: -11em;
 
     width: 100%;
     min-height: 1850px;
@@ -95,7 +90,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
 
     .main__block-wrapper {
-        padding: 500px 0 170px;
+        padding: 500px 0 0;
 
         .block__info {
             width: 1045px;
@@ -184,7 +179,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
         }
 
         .block__components {
-            width: 95%;
+            width: 85%;
             margin: 0 auto;
             position: relative;
 
@@ -200,8 +195,10 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                 font-family: 'DrukWideCyr-Bold';
 
                 .component {
-                    width: 33%;
-                    border-bottom: 5px solid #eed1ff;
+                    border: 2px solid rgb(238, 209, 255);
+                    border-radius: 10px;
+                    background: linear-gradient(180.00deg, rgba(142, 71, 140, 0.2), rgba(87, 57, 44, 0.2) 100%);
+                    padding: 2em;
 
                     p.percents {
                         font-size: 50px;
@@ -224,11 +221,11 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
             .item-logo {
                 position: absolute;
-                top: -20%;
+                top: 5em;
 
-                left: calc((100% - 40%) / 2);
-                width: 40%;
-                padding-top: 40%;
+                left: calc((100% - 15%) / 2);
+                width: 15%;
+                padding-top: 15%;
 
                 z-index: 3;
 
@@ -268,13 +265,13 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
             @media (max-width: 1575px) {
                 .item-logo {
-                    top: -5%;
+                    top: 5em;
                 }
             }
 
             @media (max-width: 1375px) {
                 .item-logo {
-                    top: 0;
+                    top: 6em;
                 }
             }
 
@@ -283,7 +280,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                     margin-top: 125px;
 
                     .component {
-                        width: 40%;
+                        padding: 1.5em;
 
                         p.percents {
                             font-size: 50px;
@@ -296,6 +293,25 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                         }
                     }
                 }
+
+                .item-logo {
+
+                    left: calc((100% - 20%) / 2);
+                    width: 20%;
+                    padding-top: 19%;
+                }
+            }
+
+            @media (max-width: 760px) {
+                .item-logo {
+                    top: 4em;
+                }
+            }
+
+            @media (max-width: 500px) {
+                .item-logo {
+                    top: 3.5em;
+                }
             }
         }
     }
@@ -303,10 +319,14 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1700px) {
     .main__block {
-        margin-top: 0px;
+        margin-top: -18em;
     }
+}
+
+@media (max-width: 1100px) {
+    .main__block {}
 
     .main__block-wrapper {
         padding: 350px 0 0 !important;
@@ -347,14 +367,14 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
                 .component {
                     p.percents {
-                        font-size: 40px !important;
+                        font-size: 30px !important;
                         line-height: 61px;
                     }
 
                     p.naming {
                         margin-top: 7px;
-                        font-size: 25px !important;
-                        padding-bottom: 20px;
+                        font-size: 20px !important;
+                        padding-bottom: 0px !important;
                     }
                 }
             }
@@ -366,7 +386,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
 
     .main__block-wrapper {
-        padding: 275px 0 200px !important;
+        padding: 275px 0 0 !important;
 
         .block__info {
             width: 750px !important;
@@ -405,6 +425,8 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                 margin-top: 40px !important;
 
                 .component {
+                    padding: 1.2em !important;
+
                     p.percents {
                         font-size: 25px !important;
                         line-height: 50px;
@@ -413,7 +435,6 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                     p.naming {
                         margin-top: 4px;
                         font-size: 20px !important;
-                        padding-bottom: 0px;
                     }
                 }
             }
@@ -425,7 +446,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
 
     .main__block-wrapper {
-        padding: 275px 0 200px !important;
+        padding: 275px 0 0 !important;
 
         .block__info {
             width: 500px !important;
@@ -436,14 +457,16 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                 margin-top: 40px !important;
 
                 .component {
+                    padding: 1em !important;
+
                     p.percents {
-                        font-size: 25px !important;
-                        line-height: 50px;
+                        font-size: 18px !important;
+                        line-height: 20px !important;
                     }
 
                     p.naming {
                         margin-top: 4px;
-                        font-size: 20px !important;
+                        font-size: 16px !important;
                         padding-bottom: 0px;
                     }
                 }
@@ -454,14 +477,14 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
 @media (max-width: 590px) {
     .main__block-wrapper {
-        padding: 200px 0 200px !important;
+        padding: 275px 0 0 !important;
     }
 }
 
 @media (max-width: 500px) {
 
     .main__block-wrapper {
-        padding: 150px 0 200px !important;
+        padding: 300px 0 0 !important;
 
         .block__info {
             width: 290px !important;
@@ -492,14 +515,16 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                 margin-top: 10px !important;
 
                 .component {
+                    padding: 0.9em !important;
+
                     p.percents {
-                        font-size: 10px !important;
-                        line-height: 25px !important;
+                        font-size: 15px !important;
+                        line-height: 15px !important;
                     }
 
                     p.naming {
                         margin-top: 1px !important;
-                        font-size: 8px !important;
+                        font-size: 12px !important;
                         padding-bottom: 0px !important;
                     }
                 }

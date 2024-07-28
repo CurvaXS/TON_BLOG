@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="body-tablet">
     <div class="midstream"></div>
     <div class="loops">
       <div class=" loop"></div>
@@ -29,6 +29,7 @@ const SwingHor = (event) => {
 * {
   color: #000;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .midstream {
@@ -52,7 +53,7 @@ const SwingHor = (event) => {
   background: rgb(27, 20, 31);
 }
 
-.body {
+.body-tablet {
   perspective: 800px;
 }
 
@@ -69,8 +70,19 @@ const SwingHor = (event) => {
   align-items: center;
   justify-content: center;
 
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   transform-origin: top;
+
+}
+
+.table-hor:hover {
+  /* background: rgb(188, 62, 108); */
+  background: linear-gradient(90deg, rgb(94, 31, 54) 0%, rgb(120, 16, 54) 50%, rgb(114, 8, 47) 100%);
+
+  p {
+    color: #fff;
+  }
+
 }
 
 .table-hor p {
@@ -128,6 +140,7 @@ const SwingHor = (event) => {
     font-size: 22px;
   }
 }
+
 @media (max-width: 500px) {
   .midstream {
     width: 150px;

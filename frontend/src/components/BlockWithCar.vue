@@ -10,15 +10,21 @@
             <VerticalTablet class="second-v"></VerticalTablet>
         </div>
 
-        <div class="car car-st">
+        <div class="bg-absolute">
+            <BG></BG>
+        </div>
+        
+
+        <!-- <div class="car car-st">
             <div class="smoke"></div>
-            <img src="../assets/img/car.png" alt="">
+            <img src="../assets/img/car-crop.png" alt="">
         </div>
 
         <div class="lights car-st">
             <img src="../assets/img/car__blur.png" alt="">
-        </div>
+        </div> -->
 
+        <!-- <div class="black-bc"></div> -->
 
     </div>
 </template>
@@ -26,30 +32,45 @@
 <script setup>
 import HorizontalTablet from './Tablets/HorizontalTablet.vue'
 import VerticalTablet from './Tablets/VerticalTablet.vue'
-
+import BG from '../components/BackgroundForBlockWithCar/BG.vue'
 </script>
 
 <style lang="scss">
 .main__block-car {
     position: relative;
 
-    margin-top: 117px;
+    margin-top: 0;
 
     width: 100%;
     min-height: 1595px;
 
-    background: url('../assets/img/miami__background-4.gif') no-repeat center;
-    background-size: cover;
-    background-position: bottom;
+    // background: url('../assets/img/miami__background-4.gif') no-repeat center;
+    // background-size: cover;
+    // background-position: bottom;
+
+    .black-bc {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.65);
+        z-index: 0;
+        top: 0;
+    }
+    .bg-absolute{
+        position: absolute;
+        top: 0;
+        height: 100%;
+    }
 
     .tablets {
         position: relative;
+        z-index: 2010;
 
         .first-h {
             position: absolute;
             // padding-top: 30px;
             top: 30px;
-            z-index: 10;
+            z-index: 2010;
 
             .midstream {
                 width: 581px;
@@ -69,6 +90,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
         .second-h {
             padding-top: 300px;
+
 
             .midstream {
                 width: 238px;
@@ -194,21 +216,25 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
 
     .car {
         z-index: 1;
+        // max-height: 22em;
+        // overflow: hidden;
     }
 
     .lights {
         z-index: 0;
+        // max-height: 350px;
+        // overflow: hidden;
     }
 
     .car-st {
         position: absolute;
 
-        bottom: 0px;
+        bottom: 0em;
         left: 50%;
         transform: translateX(-44%);
 
         animation: flicker 1.5s infinite;
-        
+
 
         width: 33%;
 
@@ -256,7 +282,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
     .main__block-car {
         // background-size: 200%;
         min-height: 1000px;
-        margin-top: -75px;
+        margin-top: 0;
 
         .tablets {
             .first-h {
@@ -421,7 +447,7 @@ import VerticalTablet from './Tablets/VerticalTablet.vue'
                     width: 50px;
                     height: 250px;
 
-                    p{
+                    p {
                         font-size: 16px;
                     }
                 }

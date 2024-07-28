@@ -1,0 +1,88 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container .box {
+    width: 235px;
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container .box span {
+    position: absolute;
+    box-sizing: border-box;
+    background: rgba(68, 49, 186, 0.4);
+    border-radius: 50%;
+  
+    animation: ripple 5s linear infinite;
+    animation-delay: calc(-1.75s * var(--i));
+  
+    z-index: -1;
+  }
+  
+  @keyframes ripple {
+    0% {
+      width: 50px;
+      height: 50px;
+    }
+  
+    85% {
+      opacity: 1;
+    }
+  
+    100% {
+      width: 250px;
+      height: 250px;
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .container .box {
+        width: 220px;
+        height: 220px;
+      }
+      @keyframes ripple {
+        0% {
+          width: 50px;
+          height: 50px;
+        }
+      
+        85% {
+          opacity: 1;
+        }
+      
+        100% {
+          width: 220px;
+          height: 220px;
+          opacity: 0;
+        }
+      }
+  }
+  @media (max-width: 500px) {
+    .container .box {
+        width: 180px;
+        height: 180px;
+      }
+      @keyframes ripple {
+        0% {
+          width: 50px;
+          height: 50px;
+        }
+      
+        85% {
+          opacity: 1;
+        }
+      
+        100% {
+          width: 180px;
+          height: 180px;
+          opacity: 0;
+        }
+      }
+  }

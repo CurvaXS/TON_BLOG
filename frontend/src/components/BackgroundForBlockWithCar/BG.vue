@@ -1,0 +1,501 @@
+<template>
+    <div class="area">
+        <div class="body">
+            <div class="scene">
+                <div class="delorean">
+                    <div class="mirror-left"></div>
+                    <div class="mirror-right"></div>
+                    <div class="delorean-cases">
+                        <div class="wheel-case-left"></div>
+                        <div class="wheel-case-right"></div>
+                        <div class="wheel-left"></div>
+                        <div class="wheel-right"></div>
+                    </div>
+                    <div class="delorean-top">
+                        <div class="top-lines-on-top"></div>
+                        <div class="top-lines-on-top right"></div>
+                        <div class="rear-window"></div>
+                        <div class="lights">
+                            <div class="lights-frame"></div>
+                            <div class="red-light-left"></div>
+                            <div class="red-light-right"></div>
+                            <div class="id-container">
+                                <div class="id"></div>
+                            </div>
+                            <div class="red-reflection"></div>
+                        </div>
+                        <div class="bumper-light-reflection"></div>
+                        <div class="bumper-light-reflection right"></div>
+                    </div>
+                    <div class="bumper">
+                        <div class="bumper-reflection"></div>
+                        <div class="bumper-logo"></div>
+                        <div class="bumper-hole-1"></div>
+                        <div class="bumper-hole-2"></div>
+                        <div class="bumper-sticker"></div>
+                        <div class="dashes"></div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+                <div class="top">
+                    <div class="startails">
+                        <div class="startail-r"></div>
+                        <div class="startail-l"></div>
+                        <div class="startail-m"></div>
+                    </div>
+                    <div class="top-lines"></div>
+                    <!-- <div class="brand">
+                <div class="triangle"></div>
+                <div class="kode-text"></div>
+            </div> -->
+                    <div class="sun"></div>
+                    <div class="palm small">
+                        <div class="trunk"></div>
+                        <div class="trunk-bottom"></div>
+                        <div class="leaf-1"></div>
+                        <div class="leaf-1-s"></div>
+                        <div class="leaf-2"></div>
+                        <div class="leaf-2-s"></div>
+                        <div class="leaf-3"></div>
+                        <div class="leaf-3-s"></div>
+                    </div>
+                    <div class="palm">
+                        <div class="trunk"></div>
+                        <div class="trunk-bottom"></div>
+                        <div class="leaf-1"></div>
+                        <div class="leaf-1-s"></div>
+                        <div class="leaf-2"></div>
+                        <div class="leaf-2-s"></div>
+                        <div class="leaf-3"></div>
+                        <div class="leaf-3-s"></div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="m0"></div>
+                    <div class="m1"></div>
+                    <div class="m2"></div>
+                    <div class="bottom-overlay"></div>
+                </div>
+                <div id="stars"></div>
+            </div>
+        </div>
+
+        <div class="black"></div>
+    </div>
+
+</template>
+
+
+<script setup>
+import { onMounted, ref } from 'vue';
+
+const getRandomInt = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+};
+
+const renderStars = () => {
+    const stars = document.getElementById("stars");
+    stars.innerHTML = '';
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const starCount = getRandomInt(42, 100);
+
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        const x = getRandomInt(0, w);
+        const y = getRandomInt(0, h);
+        star.style.setProperty('--x', `${x}px`);
+        star.style.setProperty('--y', `${y}px`);
+        stars.appendChild(star);
+    }
+};
+
+onMounted(() => {
+    renderStars();
+    window.addEventListener('resize', () => requestAnimationFrame(renderStars));
+});
+
+</script>
+
+
+<style>
+@import url('./1.css');
+@import url('./2.css');
+@import url('./3.css');
+
+@property --shift {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+:root {
+    --labs-sys-color-background: #111;
+    --labs-sys-color-on-background: white;
+    --base-speed: 4s;
+    --labs-sys-color-grid: #fac4ff;
+    --labs-sys-color-grid-glow: #df7373;
+    --labs-sys-color-sun-1: #fdb428;
+    --labs-sys-color-sun-2: #f672ca;
+    --labs-sys-color-sun-glow: #b9f;
+    --labs-sys-color-star: #f6c0c0;
+    --color-palm-trunk: #333;
+    --color-palm-leaf: #333;
+    --color-palm-leaf-2: #b9f;
+    --labs-sys-color-triangle: #6eccee;
+}
+
+.area {
+    position: relative;
+}
+
+.area .black {
+    position: absolute;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+
+.delorean {
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    animation: delorean 30s ease infinite;
+    perspective: 1000px;
+}
+
+.delorean .delorean-top .id:before {
+    content: "time" !important;
+}
+
+.delorean .delorean-top .id:after {
+    content: "$WAY" !important;
+}
+
+.labs-follow-me-twitter,
+.labs-follow-me {
+    display: none;
+}
+
+@keyframes delorean {
+    from {
+        transform: translateY(0);
+    }
+
+    9% {
+        transform: translateX(-2vmin);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translate(-0.05vmin, 6vmin) scale(1.5);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.sun {
+    position: relative;
+    width: min(40vmin, 40%);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 4rem var(--labs-sys-color-sun-glow));
+}
+
+.sun:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    --shift: 1;
+    -webkit-mask: linear-gradient(to top, #000 calc(1% + (3.5% * var(--shift))), 0%, #0000 calc(8% + (2.8% * var(--shift))), 0%, #000 calc(10% + (3.5% * var(--shift))), 0%, #0000 calc(16% + (2.8% * var(--shift))), 0%, #000 calc(19% + (3.5% * var(--shift))), 0%, #0000 calc(24% + (2.8% * var(--shift))), 0%, #000 calc(28% + (3.5% * var(--shift))), 0%, #0000 calc(32% + (2.8% * var(--shift))), 0%, #000 calc(37% + (3.5% * var(--shift))), 0%, #0000 calc(40% + (2.8% * var(--shift))), 0%, #000 calc(46% + (3.5% * var(--shift))), 0%, #0000 calc(48% + (2.8% * var(--shift))), 0%, #000 calc(55% + (3.5% * var(--shift))), 0%, #0000 calc(56% + (2.8% * var(--shift))), 0%, #000 calc(56% + (2.5% * var(--shift))));
+    mask: linear-gradient(to top, #000 calc(1% + (3.5% * var(--shift))), 0%, #0000 calc(8% + (2.8% * var(--shift))), 0%, #000 calc(10% + (3.5% * var(--shift))), 0%, #0000 calc(16% + (2.8% * var(--shift))), 0%, #000 calc(19% + (3.5% * var(--shift))), 0%, #0000 calc(24% + (2.8% * var(--shift))), 0%, #000 calc(28% + (3.5% * var(--shift))), 0%, #0000 calc(32% + (2.8% * var(--shift))), 0%, #000 calc(37% + (3.5% * var(--shift))), 0%, #0000 calc(40% + (2.8% * var(--shift))), 0%, #000 calc(46% + (3.5% * var(--shift))), 0%, #0000 calc(48% + (2.8% * var(--shift))), 0%, #000 calc(55% + (3.5% * var(--shift))), 0%, #0000 calc(56% + (2.8% * var(--shift))), 0%, #000 calc(56% + (2.5% * var(--shift))));
+    -webkit-mask-size: 100% 120%;
+    mask-size: 100% 120%;
+    animation: sun calc(var(--base-speed) / 4) linear infinite;
+    border-radius: inherit;
+    background-image: linear-gradient(to bottom, var(--labs-sys-color-sun-1), var(--labs-sys-color-sun-2) 60%);
+}
+
+.sun:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to top, var(--labs-sys-color-sun-1), var(--labs-sys-color-sun-2) 55%, var(--labs-sys-color-triangle) 65%, var(--labs-sys-color-sun-2) 69%);
+    border-radius: inherit;
+    transform: translateY(100%) rotateX(40deg) scaleY(1.2);
+    perspective: 6.25rem;
+    filter: blur(200px);
+}
+
+@keyframes sun {
+    from {
+        --shift: 1;
+    }
+
+    to {
+        --shift: 3.8;
+    }
+}
+
+.top-lines {
+    background: linear-gradient(to bottom, var(--labs-sys-color-sun-2) 0.2vmin, transparent 0.2vmin);
+    background-size: 125rem 0.4vmin;
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: overlay;
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+.top {
+    padding-top: 4rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.top:after {
+    content: "";
+    position: absolute;
+    bottom: -0.5vmin;
+    left: 0;
+    right: 0;
+    background: #222;
+    height: 5vmin;
+    -webkit-clip-path: polygon(0% 38%, 2.6% 40%, 5.4% 24%, 8.7% 59%, 13.6% 72%, 18.5% 22%, 21.7% 35%, 27.2% 8%, 34% 53%, 39.4% 81%, 49.1% 85%, 54.5% 64%, 60% 53%, 71.4% 80%, 73.4% 15%, 79.8% 29%, 86.5% 15%, 94.1% 36%, 100% 27%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 38%, 2.6% 40%, 5.4% 24%, 8.7% 59%, 13.6% 72%, 18.5% 22%, 21.7% 35%, 27.2% 8%, 34% 53%, 39.4% 81%, 49.1% 85%, 54.5% 64%, 60% 53%, 71.4% 80%, 73.4% 15%, 79.8% 29%, 86.5% 15%, 94.1% 36%, 100% 27%, 100% 100%, 0% 100%);
+}
+
+.top:before {
+    content: "";
+    position: absolute;
+    bottom: -1vmin;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    mix-blend-mode: soft-light;
+    height: 15vmin;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    -webkit-clip-path: polygon(0% 38%, 2.6% 40%, 5.4% 24%, 8.7% 59%, 13.6% 72%, 18.5% 22%, 21.7% 35%, 27.2% 8%, 34% 53%, 39.4% 81%, 49.1% 85%, 54.5% 64%, 60% 53%, 71.2% 70%, 76.6% 24%, 81.4% 0%, 87.1% 13%, 94.2% 27%, 100% 32%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 38%, 2.6% 40%, 5.4% 24%, 8.7% 59%, 13.6% 72%, 18.5% 22%, 21.7% 35%, 27.2% 8%, 34% 53%, 39.4% 81%, 49.1% 85%, 54.5% 64%, 60% 53%, 71.2% 70%, 76.6% 24%, 81.4% 0%, 87.1% 13%, 94.2% 27%, 100% 32%, 100% 100%, 0% 100%);
+}
+
+.bottom-overlay {
+    perspective: 14.5rem;
+    flex: 0 0 12.5rem;
+    position: absolute;
+    z-index: 10000;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 15.5rem;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(30, 30, 30, 0.9) 70%);
+}
+
+.bottom {
+    background: inherit;
+    perspective: 14.5rem;
+    flex: 0 0 15.5rem;
+    position: relative;
+}
+
+.bottom:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    --line-width: 0.0635rem;
+    background: linear-gradient(to right, var(--labs-sys-color-grid) var(--line-width), transparent var(--line-width)), linear-gradient(to bottom, var(--labs-sys-color-grid) var(--line-width), transparent var(--line-width));
+    background-size: 2rem 125rem, 125rem 2rem;
+    transform: rotateX(53deg) scale(1.8) translateZ(43px);
+    animation: grid calc(var(--base-speed) * 1) linear infinite;
+    border-top: 1px solid var(--labs-sys-color-grid);
+    filter: drop-shadow(0 0 2px var(--labs-sys-color-grid-glow));
+}
+
+@keyframes grid {
+    from {
+        background-position-y: -30rem;
+    }
+
+    to {
+        background-position-y: 0%;
+    }
+}
+
+#stars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 20rem;
+    overflow: hidden;
+    left: 0;
+    z-index: -1;
+    animation: stars 20s linear;
+}
+
+#stars .star {
+    position: absolute;
+    background: var(--labs-sys-color-star);
+    width: 0.15rem;
+    height: 0.15rem;
+    border-radius: 50%;
+    transform: translate(var(--x), var(--y));
+    box-shadow: 0 0 0.25rem var(--labs-sys-color-sun-glow);
+}
+
+@keyframes stars {
+    from {
+        transform: translateX(0);
+    }
+
+    60% {
+        transform: translateX(3vmax) rotate(1deg);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.palm:not(.small) {
+    animation: palm-shaking 5s linear infinite;
+}
+
+.palm.small {
+    animation: small-palm-shaking 4s linear inifinte;
+}
+
+@keyframes palm-shaking {
+    from {
+        transform: translate(10vmin, 0vmin) rotate(6deg);
+    }
+
+    50% {
+        transform: translate(10.5vmin, 0vmin) rotate(9deg);
+    }
+
+    to {
+        transform: translate(10vmin, 0vmin) rotate(6deg);
+    }
+}
+
+@keyframes small-palm-shaking {
+    from {
+        transform: translate(9vmin, 9vmin) scale(0.4) rotate(344deg) skewX(5deg);
+    }
+
+    50% {
+        transform: translate(9vmin, 9vmin) scale(0.4) rotate(356deg) skewX(5deg);
+    }
+
+    to {
+        transform: translate(9vmin, 9vmin) scale(0.4) rotate(344deg) skewX(5deg);
+    }
+}
+
+.startails {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    mix-blend-mode: lighten;
+}
+
+.startail-r {
+    position: absolute;
+    left: 75vw;
+    bottom: 0;
+    background: linear-gradient(to right, var(--labs-sys-color-sun-glow) 10%, var(--labs-sys-color-triangle) 50%, transparent 80%);
+    height: 0.2vmin;
+    width: 15vmin;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 15px white);
+    transform: translateY(-32vmin) rotate(-20deg);
+}
+
+.startail-l {
+    position: absolute;
+    left: 16vw;
+    bottom: 0;
+    background: linear-gradient(to right, var(--labs-sys-color-sun-glow) 10%, var(--labs-sys-color-triangle) 30%, transparent 60%);
+    height: 0.2vmin;
+    width: 17vmin;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 15px white);
+    transform: translateY(-7vmin) rotate(-20deg);
+}
+
+.startail-m {
+    position: absolute;
+    left: 18vw;
+    bottom: 0;
+    background: linear-gradient(to right, var(--labs-sys-color-sun-glow) 10%, var(--labs-sys-color-triangle) 50%, transparent 80%);
+    height: 0.2vmin;
+    width: 14vmin;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 15px white);
+    transform: translateY(-18vmin) rotate(-20deg);
+    opacity: 0.5;
+}
+
+.scene {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.scene:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: url(https://assets.codepen.io/907471/noise.svg);
+    opacity: 0.7;
+    mix-blend-mode: overlay;
+    filter: invert(1);
+    z-index: 20000;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--labs-sys-color-background);
+    color: var(--labs-sys-color-on-background);
+    /* height: 90vh; */
+    /* height: 1595px; */
+    width: 100vw;
+    overflow: hidden;
+    color: var(--labs-sys-color-triangle);
+    display: block !important;
+    overflow: hidden;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    outline-color: var(--labs-sys-color-sun-2);
+}
+</style>

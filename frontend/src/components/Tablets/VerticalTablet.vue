@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="body-tablet">
     <div class="midstream"></div>
     <div class="loops-right">
       <div class="loop"></div>
@@ -33,7 +33,7 @@ const Swing = (event) => {
   display: none;
 }
 
-.body {
+.body-tablet {
   perspective: 800px;
 
   display: flex;

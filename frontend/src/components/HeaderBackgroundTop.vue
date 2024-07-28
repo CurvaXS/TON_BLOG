@@ -1,5 +1,6 @@
 <template>
     <div class="u">
+        <!-- <img src="../assets/img/2.gif" alt="miami__background.png"> -->
         <img src="../assets/img/miami__background.png" alt="">
         <!-- <div class="dark"></div> -->
     </div>
@@ -15,6 +16,7 @@
     img {
         width: 100%;
         display: block;
+        opacity: 0.5;
         /* Убедитесь, что изображение блочный элемент */
     }
 

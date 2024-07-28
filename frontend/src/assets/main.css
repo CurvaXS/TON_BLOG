@@ -66,7 +66,7 @@ body {
   color: rgb(255, 255, 255);
   font-family: Inter;
 }
-.wrapper .body .table {
+.wrapper .body-tablet .table {
   background: url("../assets/img/tablet-v-back.png") no-repeat !important;
   background-size: cover !important;
 }
@@ -89,30 +89,9 @@ header .header__wrapper {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 3010;
   top: 32px;
   left: calc((100% - 994px) / 2);
-}
-header .header__wrapper .header__logo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-header .header__wrapper .header__logo .logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background-color: antiquewhite;
-}
-header .header__wrapper .header__logo .logo__text {
-  margin-left: 10px;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29px;
-}
-header .header__wrapper .header__logo .logo__text span {
-  color: rgb(195, 174, 255);
 }
 header .header__wrapper .header__nav {
   display: flex;
@@ -126,7 +105,7 @@ header .header__wrapper .header__nav {
   background: rgba(255, 255, 255, 0.06);
   transition: all 0.4s ease-in-out;
 }
-header .header__wrapper .header__nav img {
+header .header__wrapper .header__nav .logo {
   margin-left: 27px;
 }
 header .header__wrapper .header__nav nav {
