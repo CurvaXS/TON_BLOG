@@ -6,7 +6,9 @@
       <div class="loop"></div>
     </div>
     <div class="table" @click="Swing">
-      <p>lorem ipsum</p>
+
+      <p id="1"> TOP SECRET!</p>
+      <p id="2"> CEX - Get ready to trade $WAY on top exchanges!</p>
     </div>
   </div>
 </template>
@@ -75,11 +77,16 @@ const Swing = (event) => {
   font-family: 'DrukWideCyr-Bold';
   font-size: 38px;
   font-weight: 700;
-  line-height: 33px;
+  line-height: 26px;
 
   text-transform: uppercase;
   writing-mode: vertical-lr;
   text-orientation: upright;
+}
+
+p[id="1"],
+p[id="2"] {
+  display: none;
 }
 
 .swing {

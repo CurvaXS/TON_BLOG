@@ -13,7 +13,7 @@
         <div class="bg-absolute">
             <BG></BG>
         </div>
-        
+
 
         <!-- <div class="car car-st">
             <div class="smoke"></div>
@@ -56,7 +56,8 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
         z-index: 0;
         top: 0;
     }
-    .bg-absolute{
+
+    .bg-absolute {
         position: absolute;
         top: 0;
         height: 100%;
@@ -85,7 +86,12 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
                 margin-left: 110px;
                 width: 430px;
                 height: 114px;
+
+                p[id="1"] {
+                    display: block;
+                }
             }
+
         }
 
         .second-h {
@@ -107,6 +113,10 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
                 height: 114px;
 
                 transform-origin: center;
+
+                p[id="2"] {
+                    display: block;
+                }
             }
         }
 
@@ -131,6 +141,10 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
                 margin-right: 5px;
                 height: 430px;
                 height: 114px;
+
+                p[id="3"] {
+                    display: block;
+                }
             }
         }
 
@@ -154,7 +168,11 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
             .table-hor {
                 margin-right: 5px;
                 width: 303px;
-                height: 114px;
+                height: 188px;
+
+                p[id="4"] {
+                    display: block;
+                }
             }
         }
 
@@ -162,6 +180,10 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
             position: absolute;
             top: 30px;
             right: 0;
+
+            p[id="1"] {
+                display: block;
+            }
         }
 
         .second-v {
@@ -200,6 +222,8 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
                 .loop:nth-child(1) {
                     background: transparent;
                 }
+
+
             }
 
             .table {
@@ -207,8 +231,12 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
                 width: 123px;
 
                 p {
-                    font-size: 27px;
+                    font-size: 12px;
                     padding: 10px;
+                }
+
+                p[id="2"] {
+                    display: block;
                 }
             }
         }
@@ -383,7 +411,7 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
                     width: 100px;
 
                     p {
-                        font-size: 22px;
+                        font-size: 11px;
                         padding: 10px;
                     }
                 }
@@ -455,6 +483,12 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
 
             .second-v {
                 left: 50px;
+
+                .table {
+                    p {
+                        line-height: 15px !important;
+                    }
+                }
             }
         }
 

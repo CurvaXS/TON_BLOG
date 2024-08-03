@@ -31,7 +31,7 @@
     <div class="block_faq">
       <div class="faq__wrapper">
         <h2 id="faq">FAQ</h2>
-        <h1 class="faq__title">Lorem ipsum dolor amet</h1>
+        <h1 class="faq__title">HAVE ANY QUESTIONS?</h1>
         <div class="accordion__wrapper">
           <Accordion></Accordion>
         </div>

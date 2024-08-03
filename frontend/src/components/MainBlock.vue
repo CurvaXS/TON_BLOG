@@ -21,7 +21,7 @@
                         <p>Rich guy</p>
                     </div>
                 </div>
-                <button class="btn btn-main">View More</button>
+                <button class="btn btn-main">PRE-SALE</button>
             </div>
             <div class="block__tablets">
                 <div class="tablet-horizontal">
@@ -34,22 +34,32 @@
             <div class="block__components">
                 <div class="item">
                     <div class="component">
-                        <p class="percents">20%</p>
-                        <p class="naming">lorem ipsum</p>
+                        <p class="percents">30%</p>
+                        <p class="naming">Liquidity</p>
                     </div>
                     <div class="component component-right">
-                        <p class="percents">10%</p>
-                        <p class="naming">lorem ipsum</p>
+                        <p class="percents">5%</p>
+                        <p class="naming">Marketing</p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="component">
-                        <p class="percents">27%</p>
-                        <p class="naming">lorem ipsum</p>
+                        <p class="percents">10%</p>
+                        <p class="naming">Team</p>
                     </div>
                     <div class="component component-right">
-                        <p class="percents">33%</p>
-                        <p class="naming">lorem ipsum</p>
+                        <p class="percents">30%</p>
+                        <p class="naming">Development</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="component">
+                        <p class="percents">15%</p>
+                        <p class="naming">Presale</p>
+                    </div>
+                    <div class="component component-right">
+                        <p class="percents">10%</p>
+                        <p class="naming">Community</p>
                     </div>
                 </div>
                 <div class="item-logo">
@@ -179,8 +189,8 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
         }
 
         .block__components {
-            width: 85%;
-            margin: 0 auto;
+            width: 50%;
+            margin: -150px auto 0;
             position: relative;
 
             .item {

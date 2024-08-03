@@ -6,7 +6,14 @@
       <div class="loop"></div>
     </div>
     <div class="table-hor" @click="SwingHor">
-      <p>Нажми на меня</p>
+
+      <p id="1"> PRESALE - Don't miss out! $WAY presale starts now. Be among the first.</p>
+      <p id="2"> DEX - $WAY becomes available for trading on DEXs</p>
+      <p id="3"> NFT - Creation of collectible NFTs powered by the Ton blockchain.</p>
+      <p id="4"> Stake - Showering our $WAY holders with love and appreciation! Exclusive rewards and giveaways await!
+      </p>
+      <p id="5">Нажми на меня</p>
+      <p id="6">Нажми на меня</p>
     </div>
   </div>
 
@@ -88,9 +95,19 @@ const SwingHor = (event) => {
 .table-hor p {
   color: rgb(111, 100, 99);
   font-family: 'DrukWideCyr-Bold';
-  font-size: 27px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 33px;
+  line-height: 20px;
+  padding: 1em;
+}
+
+p[id="1"],
+p[id="2"],
+p[id="3"],
+p[id="4"],
+p[id="5"],
+p[id="6"] {
+  display: none;
 }
 
 .swing-h {
@@ -137,7 +154,7 @@ const SwingHor = (event) => {
   }
 
   .table-hor p {
-    font-size: 22px;
+    font-size: 13px !important;
   }
 }
 
@@ -159,7 +176,7 @@ const SwingHor = (event) => {
   }
 
   .table-hor p {
-    font-size: 16px;
+    font-size: 11px !important;
   }
 }
 </style>
