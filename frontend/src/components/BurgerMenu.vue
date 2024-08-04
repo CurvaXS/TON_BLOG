@@ -56,7 +56,7 @@
     position: fixed;
     top: 8px;
     right: 16px;
-    z-index: 2000;
+    z-index: 8000;
     box-shadow: 0 1rem 3rem black;
     text-align: center;
     cursor: pointer;
@@ -70,7 +70,7 @@
     top: 8px;
     right: 16px;
     background: linear-gradient(90deg, rgb(188, 62, 108) 0%, rgb(120, 16, 54) 50%, rgb(188, 62, 108) 100%);
-    z-index: 1000;
+    z-index: 7000;
   
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -80,7 +80,7 @@
     position: fixed;
     top: 0;
     right: -100vh;
-    z-index: 1500;
+    z-index: 7998;
     opacity: 0;
     width: 0;
     transition: all 0.8s;
@@ -94,6 +94,7 @@
     list-style: none;
     text-align: center;
     width: 100%;
+    z-index: 7999;
   }
   
   .item {

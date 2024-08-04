@@ -227,12 +227,15 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
             }
 
             .table {
-                height: 255px;
-                width: 123px;
+                height: 180px;
+                width: 153px;
 
                 p {
+                    max-width: 90%;
                     font-size: 12px;
-                    padding: 10px;
+                    padding-left: 5px;
+
+                    writing-mode: horizontal-tb;
                 }
 
                 p[id="2"] {
@@ -407,8 +410,8 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
                 }
 
                 .table {
-                    height: 200px;
-                    width: 100px;
+                    height: 180px;
+                    width: 153px;
 
                     p {
                         font-size: 11px;
@@ -429,7 +432,7 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
     .main__block-car {
         // background-size: 200%;
         min-height: 1000px;
-        margin-top: -75px;
+        // margin-top: -75px;
 
         .tablets {
             .first-h {
@@ -460,6 +463,12 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
                 .midstream {
                     width: 150px !important;
                 }
+                .loops {
+                    width: 100px;
+                }
+                .table-hor{
+                    width: 150px;
+                }
             }
 
             .first-v {
@@ -482,7 +491,7 @@ import BG from '../components/BackgroundForBlockWithCar/BG.vue'
             }
 
             .second-v {
-                left: 50px;
+                left: 15px;
 
                 .table {
                     p {

@@ -169,4 +169,14 @@ p[id="2"] {
     font-size: 27px;
   }
 }
+
+@media(max-width: 500px){
+  .loops-right .loop{
+    width: 25px;
+  }
+  .table {
+    width: 40px;
+    height: 250px;
+  }
+}
 </style>

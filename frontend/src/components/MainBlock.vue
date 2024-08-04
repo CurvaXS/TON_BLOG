@@ -235,7 +235,7 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
 
                 left: calc((100% - 15%) / 2);
                 width: 15%;
-                padding-top: 15%;
+                padding-top: 14%;
 
                 z-index: 3;
 
@@ -259,7 +259,7 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
 
             .item-logo-back {
                 position: absolute;
-                top: -20%;
+                top: 0;
 
                 left: calc((100% - 45%) / 2);
                 width: 45%;
@@ -308,13 +308,14 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
 
                     left: calc((100% - 20%) / 2);
                     width: 20%;
-                    padding-top: 19%;
+                    padding-top: 17%;
                 }
             }
 
             @media (max-width: 760px) {
                 .item-logo {
                     top: 4em;
+                    padding-top: 16%;
                 }
             }
 
@@ -488,6 +489,10 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
 @media (max-width: 590px) {
     .main__block-wrapper {
         padding: 275px 0 0 !important;
+
+        .block__components {
+            margin: 15px auto 0 !important;
+        }
     }
 }
 

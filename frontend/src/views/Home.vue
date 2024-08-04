@@ -135,4 +135,15 @@ import Accordion from '../components/Accordion.vue';
   font-size: 2em;
   color: white;
 }
+
+@media (max-width: 500px){
+  .gradient-background {
+    margin-top: -122px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .gradient-background .scrolling-text{
+    animation: textScroll 30s linear infinite;
+  }
+}
 </style>

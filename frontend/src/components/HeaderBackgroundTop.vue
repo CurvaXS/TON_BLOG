@@ -1,6 +1,7 @@
 <template>
     <div class="u">
         <!-- <img src="../assets/img/2.gif" alt="miami__background.png"> -->
+         <h1>WAY</h1>
         <img src="../assets/img/miami__background.png" alt="">
         <!-- <div class="dark"></div> -->
     </div>
@@ -12,6 +13,18 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
+
+   
+
+    h1{
+        text-align: center;
+        font-family: 'DrukWideCyr-Bold';
+        font-size: 60px;
+        position: absolute;
+
+        top: calc((100% - 70px)/2);
+        left: calc((100% - 176px)/2);
+    }
 
     img {
         width: 100%;

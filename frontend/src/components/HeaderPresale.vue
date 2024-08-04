@@ -43,26 +43,26 @@ import Stripes from './Stripes.vue'
 }
 
 .particle__logo {
-    position: absolute;
-    top: 138px;
-    left: -58px;
+    // position: absolute;
+    // top: 138px;
+    // left: -58px;
 
-    z-index: 10;
+    // z-index: 10;
 
-    width: 150px;
-    height: 150px;
+    // width: 150px;
+    // height: 150px;
 
-    border-radius: 50%;
-    border: 2.5px solid rgb(255, 255, 255);
-    backdrop-filter: blur(33.6px);
-    background: transparent;
+    // border-radius: 50%;
+    // border: 2.5px solid rgb(255, 255, 255);
+    // backdrop-filter: blur(33.6px);
+    // background: transparent;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 
-    transform: rotate(-26deg);
-
+    // transform: rotate(-26deg);
+    display: none;
 }
 
 @media (max-width:1100px) {
