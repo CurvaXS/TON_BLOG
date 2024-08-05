@@ -131,7 +131,7 @@ import Accordion from '../components/Accordion.vue';
 .gradient-background .scrolling-text {
   position: absolute;
   white-space: nowrap;
-  animation: textScroll 45s linear infinite;
+  /* animation: textScroll 45s linear infinite; */
   font-size: 2em;
   color: white;
 }
