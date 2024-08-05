@@ -288,7 +288,7 @@ export default {
     margin: 0 0.2vw;
 
     @media (min-width: 1000px) {
-        margin: 0 5px;
+        margin: 0;
     }
 }
 
@@ -301,34 +301,52 @@ export default {
     color: v-bind(labelColor);
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
     .no-animation__card {
+        font-size: 70px;
+    }
+
+    .flip-clock__slot {
         font-size: 65px;
     }
-
-    .flip-clock__slot {
-        font-size: 80px;
-    }
 }
-@media (max-width: 770px) {
-    .no-animation__card {
-        font-size: 50px;
-    }
 
-    .flip-clock__slot {
-        font-size: 50px;
-    }
-}
-@media (max-width: 500px) {
+@media (max-width: 950px) {
     .no-animation__card {
-        font-size: 35px;
-    }
-
-    .flip-clock__slot {
         font-size: 30px;
     }
-    .flip-clock__piece{
-        margin: 0;
+
+    .flip-clock__slot {
+        font-size: 32px;
+    }
+
+    .flip-clock {
+        span {
+            margin-right: 3px;
+        }
     }
 }
-</style>
+
+    @media (max-width: 770px) {
+        .no-animation__card {
+            font-size: 30px;
+        }
+
+        .flip-clock__slot {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .no-animation__card {
+            font-size: 35px;
+        }
+
+        .flip-clock__slot {
+            font-size: 30px;
+        }
+
+        .flip-clock__piece {
+            margin: 0;
+        }
+    }</style>

@@ -1,6 +1,5 @@
 <template>
     <div class="main__block">
-
         <div class="main__block-wrapper">
             <div class="block__info">
                 <h1 class="name">LAUNCH ON</h1>
@@ -81,10 +80,8 @@
                     </div>
                 </div>
                 <div class="vertical-line"></div>
-                <!-- <div class="item-logo-back"></div> -->
             </div>
         </div>
-
     </div>
 </template>
 
@@ -101,14 +98,10 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
 <style scoped lang="scss">
 .main__block {
     margin-top: -11em;
-
     width: 100%;
     min-height: 1850px;
-
     background: url("../assets/img/miami__background-2.png") no-repeat center;
     background-size: cover;
-
-
 
     .main__block-wrapper {
         padding: 500px 0 0;
@@ -116,7 +109,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
         .block__info {
             max-width: 1045px;
             margin: 0 auto;
-
             text-align: center;
             font-family: Lato;
 
@@ -150,12 +142,9 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                     flex-wrap: nowrap;
                     align-items: center;
                     justify-content: center;
-
                     background: url('../assets/img/step__item-back.png') no-repeat center;
-
                     width: 235px;
                     height: 235px;
-
                 }
 
                 p {
@@ -171,12 +160,9 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
             button.btn-main {
                 margin: 57px auto 0;
                 padding: 16px 24px;
-
                 border-radius: 14px;
                 background-color: rgb(109, 40, 217);
-
                 transition: all 0.2s ease-in-out;
-
                 color: #FFF;
             }
 
@@ -187,8 +173,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
             button.btn-main:active {
                 transform: scale(0.9);
             }
-
-
         }
 
         .block__tablets {
@@ -197,7 +181,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
             align-items: center;
             justify-content: space-between;
             margin-top: -45px;
-
             visibility: hidden;
         }
 
@@ -226,11 +209,9 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
 
             .item {
                 margin-top: 5px;
-
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 color: #eed1ff;
                 font-weight: 700;
                 font-family: 'DrukWideCyr-Bold';
@@ -254,7 +235,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                         padding-bottom: 20px;
                         text-transform: uppercase;
                     }
-
                 }
 
                 .connect-line {
@@ -274,19 +254,11 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
             }
 
             .item-logo {
-                // position: absolute;
-                // top: 5em;
-
-                // left: calc((100% - 15%) / 2);
                 width: 150px;
                 height: 150px;
-
-                // z-index: 3;
-
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 border-radius: 50%;
                 border: 5px solid rgb(238, 209, 255);
                 backdrop-filter: blur(1515151px);
@@ -296,7 +268,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                     position: absolute;
                     width: 75%;
                     height: 100%;
-
                     top: 0;
                 }
             }
@@ -305,19 +276,12 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                 position: absolute;
                 top: 0;
                 left: 49.9%;
-
                 width: 2px;
                 height: 100%;
                 border: 2px solid #EED1FF;
             }
-
-
-
-
         }
     }
-
-
 }
 
 @media (max-width: 1700px) {
@@ -341,7 +305,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                             line-height: 36px;
                             padding-bottom: 10px;
                         }
-
                     }
 
                     .component-right {
@@ -375,7 +338,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                             line-height: 26px;
                             padding-bottom: 5px;
                         }
-
                     }
 
                     .component-right {
@@ -418,7 +380,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                             line-height: 16px;
                             padding-bottom: 3px;
                         }
-
                     }
 
                     .component-right {
@@ -494,7 +455,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                         p.naming {
                             font-size: 14px;
                         }
-
                     }
 
                     .component-right {
@@ -512,8 +472,7 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
     }
 }
 
-@media (max-width:870px) {
-
+@media (max-width: 870px) {
     .main__block {
         .main__block-wrapper {
             .block__info {
@@ -521,7 +480,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
             }
         }
     }
-
 }
 
 @media (max-width: 590px) {
@@ -549,10 +507,8 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                     }
 
                     .item {
-
                         width: 180px;
                         height: 180px;
-
                     }
 
                     p {
@@ -560,7 +516,6 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                     }
                 }
             }
-
         }
     }
 }
