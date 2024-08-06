@@ -83,7 +83,7 @@ import Stripes from './Stripes.vue'
 }
 @media (max-width:400px) {
     .header__presale{
-        padding-top: 70px
+        padding-top: 70px;
     }
 }
 </style>

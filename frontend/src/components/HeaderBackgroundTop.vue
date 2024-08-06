@@ -25,7 +25,7 @@
                 <use href="#s-text" class="text-copy"></use>
             </g>
         </svg>
-        <img src="../assets/img/miami__background.png" alt="">
+        <img class="miami__background" src="../assets/img/miami__background.png" alt="">
         <!-- <div class="dark"></div> -->
     </div>
 </template>
@@ -39,27 +39,32 @@
 
     .socials {
         position: absolute;
-        top: 50px;
+        top: 32px;
         right: 50px;
 
-        width: 110px;
-        height: 70px;
+        width: 100px;
+        height: 64px;
 
         z-index: 3000;
 
         border-radius: 20px;
         backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.5);
 
         display: flex;
         justify-content: space-around;
         align-items: center;
 
         a {
-            width: 30px;
+            width: 25px;
+            position: relative;
+            z-index: 3001;
+
             img {
                 // max-width: 64px;
                 // max-height: 64px;
+                position: relative;
+                z-index: 3002;
                 width: 25px;
             }
         }
@@ -126,7 +131,7 @@
         }
     }
 
-    img {
+    .miami__background {
         width: 100%;
         display: block;
         opacity: 0.5;
@@ -153,8 +158,35 @@
 
 @media (max-width:1440px) {
     .u {
-        img {
+        .miami__background {
             transform: scale(1.5);
+        }
+
+        .socials {
+            top: 45px;
+            right: 10px;
+
+            width: 70px;
+            height: 44px;
+
+            a {
+                width: 18px;
+
+                img {
+                    width: 18px;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width:1250px) {
+    .u {
+        .socials {
+            width: 46px;
+            height: 93px;
+            flex-direction: column;
         }
     }
 }
@@ -166,7 +198,7 @@
             height: 80%;
         }
 
-        img {
+        .miami__background {
             transform: scale(1.9);
         }
 
@@ -175,7 +207,20 @@
         }
     }
 }
-
+@media (max-width:900px) {
+    .u {
+        .socials {
+           top: 100px;
+        }
+    }
+}
+@media (max-width:770px) {
+    .u {
+        .socials {
+           top: 45px;
+        }
+    }
+}
 @media (max-width:750px) {
     .u {
         svg {
@@ -183,7 +228,7 @@
             height: 70%;
         }
 
-        img {
+        .miami__background {
             transform: scale(3);
         }
 
@@ -198,6 +243,13 @@
         svg {
             font-size: 50px;
             height: 60%;
+        }
+    }
+}
+@media (max-width:450px) {
+    .u {
+        .socials {
+           display: none;
         }
     }
 }

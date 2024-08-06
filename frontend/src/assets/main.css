@@ -275,4 +275,7 @@ footer .footer__wrapper h2 {
   header .header__wrapper .header__nav {
     height: 67px;
   }
+  header .header__wrapper .header__nav .logo a svg {
+    margin-top: 15px !important;
+  }
 }/*# sourceMappingURL=main.css.map */

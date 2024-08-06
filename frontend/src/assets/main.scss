@@ -342,6 +342,13 @@ footer {
             }
             .header__nav{
                 height: 67px;
+                .logo{
+                    a{
+                        svg{
+                            margin-top: 15px !important;
+                        }
+                    }
+                }
             }
         }
     

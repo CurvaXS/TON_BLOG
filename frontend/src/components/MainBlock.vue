@@ -34,12 +34,10 @@
                 <div class="componets__header">
                     <h1>Token way</h1>
                     <div class="item-logo">
-                        <svg width="315" height="207" viewBox="0 0 315 207" fill="none"
+                        <svg width="324" height="181" viewBox="0 0 324 181" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M310.035 3.00003L254.386 117.714L66.9306 117.714L5.02763 3L310.035 3.00003Z"
-                                fill="#EED1FF" stroke="#EED1FF" stroke-width="6" />
-                            <path d="M243.83 144L214.738 205L111.695 205L78.8484 144L243.83 144Z" fill="#EED1FF"
-                                stroke="#EED1FF" stroke-width="4" />
+                            <path d="M0 0H324L277 102H50L0 0Z" fill="#EED1FF" />
+                            <path d="M56 113H272L240 181H88L56 113Z" fill="#EED1FF" />
                         </svg>
                     </div>
                 </div>
@@ -584,8 +582,10 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
 
 @media (max-width: 500px) {
     .main__block {
+        
         .main__block-wrapper {
             padding: 300px 0 0;
+            
 
             .block__info {
                 width: 290px;
