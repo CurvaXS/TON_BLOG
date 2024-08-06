@@ -2,6 +2,17 @@
     <div class="u">
         <!-- <img src="../assets/img/2.gif" alt="miami__background.png"> -->
         <!-- <h1>WAY</h1> -->
+        <div class="socials">
+
+            <a href="https://x.com/token_way">
+                <img src="../assets/img/twitter_elon musk_twitter new logo_icon.png" alt="">
+            </a>
+
+            <a href="https://t.me/token_way">
+                <img src="../assets/img/telegram_plane_icon.png" alt="">
+            </a>
+
+        </div>
         <svg>
             <symbol id="s-text">
                 <text text-anchor="middle" x="50%" y="60%">WAY</text>
@@ -25,6 +36,35 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
+
+    .socials {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+
+        width: 110px;
+        height: 70px;
+
+        z-index: 3000;
+
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.06);
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        a {
+            width: 30px;
+            img {
+                // max-width: 64px;
+                // max-height: 64px;
+                width: 25px;
+            }
+        }
+
+    }
 
     h1 {
         text-align: center;
@@ -121,6 +161,11 @@
 
 @media (max-width:1000px) {
     .u {
+        svg {
+            font-size: 70px;
+            height: 80%;
+        }
+
         img {
             transform: scale(1.9);
         }
@@ -133,12 +178,26 @@
 
 @media (max-width:750px) {
     .u {
+        svg {
+            font-size: 50px;
+            height: 70%;
+        }
+
         img {
             transform: scale(3);
         }
 
         .dark {
             height: 20% !important;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .u {
+        svg {
+            font-size: 50px;
+            height: 60%;
         }
     }
 }

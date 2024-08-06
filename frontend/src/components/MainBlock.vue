@@ -478,6 +478,98 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
             .block__info {
                 max-width: 500px !important;
             }
+
+            .block__components {
+                .componets__header {
+                    grid-template-rows: 60px;
+
+                    h1 {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+                }
+
+                .item {
+                    .component {
+                        min-width: 160px !important;
+                        padding: 0.5em;
+
+                        p.percents {
+                            font-size: 16px;
+                        }
+
+                        p.naming {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .component-right {
+                        text-align: right;
+                        margin-top: 35px;
+                    }
+                }
+
+                .item-logo {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .main__block {
+        .main__block-wrapper {
+            .block__components {
+                min-width: 400px;
+                margin-top: -178px;
+
+                .componets__header {
+
+                    grid-template-rows: 60px;
+
+                    h1 {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+                }
+
+                .item {
+                    .component {
+                        min-width: 160px !important;
+                        padding: 0.5em;
+
+                        p.percents {
+                            font-size: 16px;
+                        }
+
+                        p.naming {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .component-right {
+                        text-align: right;
+                        margin-top: 35px;
+                    }
+
+                    .connect-line {
+                        width: 125px;
+                        height: 1px;
+                        border: 2px solid #EED1FF;
+                    }
+                }
+
+                .item-logo {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                .vertical-line {
+                    height: 85%;
+                }
+            }
         }
     }
 }
@@ -514,6 +606,41 @@ import RippleLineTop from './Ripple/RippleLineTop.vue'
                     p {
                         font-size: 18px;
                     }
+                }
+            }
+
+            .block__components {
+                min-width: 320px;
+                margin-top: -178px;
+
+                .item {
+                    .component {
+                        min-width: 130px !important;
+                        padding: 0.5em;
+
+                        p.percents {
+                            font-size: 12px;
+                        }
+
+                        p.naming {
+                            font-size: 9px;
+                        }
+                    }
+
+                    .component-right {
+                        margin-top: 15px;
+                    }
+
+                    .connect-line {
+                        width: 125px;
+                        height: 1px;
+                        border: 2px solid #EED1FF;
+                    }
+                }
+
+                .item-logo {
+                    width: 60px;
+                    height: 60px;
                 }
             }
         }
