@@ -62,8 +62,8 @@
     width: 100%;
     // border: 3px solid red;
     overflow: hidden;
-    height: 400px;
-    padding-top: 50px;
+    height: 290px;
+    padding-top: 68px;
     position: relative;
     z-index: 1;
 
@@ -88,7 +88,7 @@
       p {
         display: flex;
         flex-wrap: nowrap;
-        padding: 13px 0;
+        padding: 8px 0;
         .border-word {
           margin: 0 10px;
           -webkit-text-stroke: 1.5px #000000;
@@ -132,6 +132,10 @@
       filter: blur(5px);
       transform: translateX(-100%) rotate(0deg);
     }
+    15% {
+      filter: blur(5px);
+      transform: translateX(-100%) rotate(0deg);
+    }
     100% {
       filter: blur(0px);
       transform: translateX(0) rotate(4deg);
@@ -143,6 +147,10 @@
       filter: blur(5px);
       transform: translateX(100%) rotate(0deg);
     }
+    15% {
+      filter: blur(5px);
+      transform: translateX(100%) rotate(0deg);
+    }
     100% {
       filter: blur(0px);
       transform: translateX(0) rotate(-4.5deg);
@@ -151,7 +159,7 @@
   
   @media (max-width: 1440px) {
     .strp {
-      height: 330px;
+      height: 270px;
       .strp__item {
         font-size: 26px;
         p {
@@ -172,6 +180,7 @@
       }
     }
   }
+
   @media (max-width: 1000px) {
     .strp {
       height: 270px;

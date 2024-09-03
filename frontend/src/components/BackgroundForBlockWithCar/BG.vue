@@ -153,14 +153,15 @@ onMounted(() => {
 }
 
 .area .black {
-    position: absolute;
+    /* position: absolute;
     z-index: 2000;
     width: 100%;
     height: 100%;
     background-color: #000;
     opacity: 0.5;
     top: 0;
-    left: 0;
+    left: 0; */
+    display: none;
 }
 
 .delorean {
